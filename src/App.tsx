@@ -4,9 +4,9 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import ErrorPage from './ErrorPage';
 import Nv from './Components/Nv';
-import HomeSlider from './Components/HomeSlider';
 import Footer from './Components/Footer';
-import CalculateEMI from './Components/CalculateEMI';
+import Contactus from './Components/Contactus';
+import Home from './Components/Home';
 
 function App() {
   const [count, setCount] = useState<string>('4');
@@ -16,14 +16,15 @@ function App() {
       <div className='App'>
         <Nv />
         <Navbar />
-        <HomeSlider />
-        <CalculateEMI/>
+
 
         <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contactus />} />
           <Route path="/error" element={<ErrorPage />} />
           {/* Add more Route components for additional pages */}
         </Routes>
-        <Footer />
+    
       </div>
     </Router>
   );
