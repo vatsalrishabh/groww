@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
 
   const [hidden, setHidden] = useState<string>("hidden");
   const smarPhoneToggle=(e: React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
+    e.preventDefault();
     if(hidden==="hidden"){
         setHidden("");
     }
@@ -38,6 +39,7 @@ const Navbar: React.FC = () => {
 
   const [blue,setblue]= useState<string>("blue");
   const markblue = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, color: string) => {
+    e.preventDefault(); 
     setblue(color); // Set the clicked tab's color to blue
   
     // Loop through all the tabs and set their color to gray except for the clicked tab
@@ -133,6 +135,7 @@ const Navbar: React.FC = () => {
               <Link to="contact" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>Contact Us</Link>
               </li>
             </ul>
+            <div className='hidden'>{blue}</div>
           </div>
         </div>
       </nav>

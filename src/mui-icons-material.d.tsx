@@ -1,0 +1,11 @@
+declare module '@mui/icons-material/Instagram';
+declare module '@mui/icons-material/X';
+declare module '@mui/icons-material/Pinterest';
+declare module '@mui/icons-material/LocationOn';
+declare module '@mui/icons-material/ArrowForward';
+declare module '@mui/icons-material/Person';
+declare module  '@mui/icons-material/CreditCard';
+declare module  '@mui/icons-material/Forum';
+declare module  '@mui/icons-material/FormatQuote';
+declare module  '@mui/icons-material/Savings';
+declare module '@mui/icons-material/ArrowRight';
