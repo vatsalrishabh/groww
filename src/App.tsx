@@ -6,6 +6,8 @@ import Nv from './Components/Nv';
 import Contactus from './Components/Contactus';
 import Home from './Components/Home';
 import Career from './Components/Career';
+import ApplyNow from './Components/ApplyNow';
+import Gallery from './Components/Gallery';
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/career" element={<Career/>} />
+        <Route path='/applynow' element={<ApplyNow/>} />
+        <Route path='/gallery' element={<Gallery/>} />
           <Route path="/error" element={<ErrorPage />} />
           {/* Add more Route components for additional pages */}
         </Routes>

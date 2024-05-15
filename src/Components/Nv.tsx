@@ -57,12 +57,12 @@ const Nv: React.FC = () => {
       <div className="w-1/2 flex justify-center">
         <div className="email">
           <div className="icon px-2 hover:cursor-pointer" onClick={sendmail}>
-            <EmailIcon /> vatsalrishabh00@gmail.com
+            <EmailIcon /> Prgrowinsightprivatelimited@gmail.com
           </div>
         </div>
         <div className="timings">
           <div className="icon px-2 hover:cursor-pointer" onClick={call}>
-            <AccessTimeFilledIcon /> 8123573669
+            <AccessTimeFilledIcon /> 91134 53768
           </div>
         </div>
       </div>

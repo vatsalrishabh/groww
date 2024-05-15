@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
+
 const Navbar: React.FC = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -83,7 +84,7 @@ const Navbar: React.FC = () => {
               <div ref={dropdownRef} className="z-50 absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                 <div className="px-4 py-3">
                   <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                  <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                  <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">Prgrowinsightprivatelimited@gmail.com</span>
                 </div>
                 <ul className="py-2" aria-labelledby="user-menu-button">
                   <li>

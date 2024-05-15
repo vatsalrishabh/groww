@@ -1,8 +1,5 @@
 import React from 'react'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import personal from '../assets/Ourservices/personal.jpg'
-import home from '../assets/Ourservices/home.jpg'
-import business from '../assets/Ourservices/business.jpg'
+
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import './LoginServices.css'
 
