@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [aboutDropdownVisible, setAboutDropdownVisible] = useState(false);
+  const [servicesDropdownVisible, setServicesDropdownVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -13,6 +15,8 @@ const Navbar: React.FC = () => {
   const handleClickOutside = (event: MouseEvent | TouchEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownVisible(false);
+      setAboutDropdownVisible(false);
+      setServicesDropdownVisible(false);
     }
   };
 
@@ -26,43 +30,30 @@ const Navbar: React.FC = () => {
   }, []);
 
   const [hidden, setHidden] = useState<string>("hidden");
-  const smarPhoneToggle=(e: React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
+  const smarPhoneToggle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    if(hidden==="hidden"){
-        setHidden("");
-    }
-    else{
-        if(hidden===""){
-            setHidden("hidden");
-        }
-    }
-  }
-
-  const [blue,setblue]= useState<string>("blue");
-  const markblue = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, color: string) => {
-    e.preventDefault(); 
-    setblue(color); // Set the clicked tab's color to blue
-  
-    // Loop through all the tabs and set their color to gray except for the clicked tab
-    const tabs = document.querySelectorAll('.nav-link');
-    tabs.forEach((tab: Element) => {
-      const tabElement = tab as HTMLElement; // Cast the Element to HTMLElement
-      if (tab === e.currentTarget) {
-        tabElement.classList.add(`text-${color}-700`); // Add blue color class to clicked tab
-      } else {
-        tabElement.classList.remove('text-blue-700', 'text-gray-700'); // Remove blue and gray color classes from other tabs
-        tabElement.classList.add('text-gray-700'); // Add gray color class to other tabs
-      }
-    });
+    setHidden(hidden === "hidden" ? "" : "hidden");
   };
-  
-  
+
+  const getLinkClasses = (path: string) => {
+    return location.pathname === path ? 'text-blue-700' : 'text-gray-700';
+  };
+
+  const toggleAboutDropdown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setAboutDropdownVisible(!aboutDropdownVisible);
+  };
+
+  const toggleServicesDropdown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setServicesDropdownVisible(!servicesDropdownVisible);
+  };
 
   return (
     <div className='Navbar'>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RCS INFO</span>
           </Link>
@@ -82,65 +73,60 @@ const Navbar: React.FC = () => {
             {/* Dropdown menu */}
             {dropdownVisible && (
               <div ref={dropdownRef} className="z-50 absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                <div className="px-4 py-3">
-                  <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                  <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">Prgrowinsightprivatelimited@gmail.com</span>
-                </div>
-                <ul className="py-2" aria-labelledby="user-menu-button">
-                  <li>
-                    <Link to="dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</Link>
-                  </li>
-                  <li>
-                    <Link to="setting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</Link>
-                  </li>
-                  <li>
-                    <Link to="earning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</Link>
-                  </li>
-                  <li>
-                    <Link to="signout" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</Link>
-                  </li>
-                </ul>
+                {/* User info here */}
               </div>
             )}
             <button data-collapse-toggle="navbar-user" type="button" onClick={smarPhoneToggle} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
               </svg>
             </button>
           </div>
           <div className={`items-center justify-between ${hidden} w-full md:flex md:w-auto md:order-1`} id='navbar-user'>
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-              <Link to="home" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`} aria-current="page">Home</Link>
+                <Link to="/" className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/')}`} aria-current="page">Home</Link>
+              </li>
+              <li className="relative">
+                <Link to="/about" onClick={toggleAboutDropdown} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/about')}`}>About Us</Link>
+                {aboutDropdownVisible && (
+                  <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600">
+                    <li><Link to="/about/company" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Company</Link></li>
+                    <li><Link to="/about/team" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Team</Link></li>
+                  </ul>
+                )}
+              </li>
+              <li className="relative">
+                <Link to="/services" onClick={toggleServicesDropdown} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/services')}`}>Services</Link>
+                {servicesDropdownVisible && (
+                  <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600">
+                    <li><Link to="/services/personal-loan" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Personal Loan</Link></li>
+                    <li><Link to="/services/home-loan" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Home Loan</Link></li>
+                    <li><Link to="/services/business-loan" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Business Loan</Link></li>
+                    <li><Link to="/services/auto-loan" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Auto Loan</Link></li>
+                  </ul>
+                )}
               </li>
               <li>
-              <Link to="about" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>About Us</Link>
+                <Link to="/news" className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/news')}`}>News</Link>
               </li>
               <li>
-              <Link to="services" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>Services</Link>
+                <Link to="/gallery" className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/gallery')}`}>Gallery</Link>
               </li>
               <li>
-              <Link to="news" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>News</Link>
+                <Link to="/applynow" className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/applynow')}`}>Apply Now</Link>
               </li>
               <li>
-              <Link to="gallery" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>Gallery</Link>
+                <Link to="/career" className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/career')}`}>Career</Link>
               </li>
               <li>
-              <Link to="applynow" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>Apply Now</Link>
-              </li>
-              <li>
-              <Link to="career" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>Career</Link>
-              </li>
-              <li>
-              <Link to="contact" onClick={(e) => markblue(e, 'blue')} className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 md:hover:text-blue-700 ${window.innerWidth < 640 ? 'text-white' : ''}`}>Contact Us</Link>
+                <Link to="/contact" className={`nav-link block py-2 px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/contact')}`}>Contact Us</Link>
               </li>
             </ul>
-            <div className='hidden'>{blue}</div>
           </div>
         </div>
       </nav>
-      <Outlet/>
     </div>
   );
 };

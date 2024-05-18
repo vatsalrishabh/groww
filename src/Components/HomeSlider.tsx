@@ -28,14 +28,14 @@ const HomeSlider: React.FC = () => {
   };
 
   return (
-    <div className={`HomeSlider relative w-full lg:h-[50vh] py-5`}>
+    <div className="HomeSlider relative w-full lg:h-[50vh] py-5">
       <div
-        className="animation-container bg-cover bg-no-repeat bg-center"
+        className="animation-container  bg-cover bg-no-repeat bg-center"
         style={{
           backgroundImage: `url(${images[currentImageIndex]})`, // Set image as background
         }}
       >
-        <div className="overlay-content lg:flex items-center justify-between w-full h-full px-10 ">
+        <div className="overlay-content lg:flex items-center justify-between w-full h-full px-10">
           <div className="lg:w-2/3 text-white">
             <h1 className="text-4xl font-bold mb-4">
               Get Instant Personal Loan at Incredibly Low Rates

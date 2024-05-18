@@ -8,6 +8,8 @@ import Home from './Components/Home';
 import Career from './Components/Career';
 import ApplyNow from './Components/ApplyNow';
 import Gallery from './Components/Gallery';
+import News from './Components/News';
+import BusinessLoan from './Components/BusinessLoan';
 
 function App() {
 
@@ -25,7 +27,9 @@ function App() {
         <Route path="/career" element={<Career/>} />
         <Route path='/applynow' element={<ApplyNow/>} />
         <Route path='/gallery' element={<Gallery/>} />
-          <Route path="/error" element={<ErrorPage />} />
+        <Route path='/news' element={<News/>} />
+        <Route path="/error" element={<ErrorPage />} />
+        <Route path="services/business" element={<BusinessLoan/>}/>
           {/* Add more Route components for additional pages */}
         </Routes>
     

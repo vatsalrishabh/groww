@@ -9,3 +9,6 @@ declare module  '@mui/icons-material/Forum';
 declare module  '@mui/icons-material/FormatQuote';
 declare module  '@mui/icons-material/Savings';
 declare module '@mui/icons-material/ArrowRight';
+declare module '@mui/icons-material/ChevronRight';
+declare module '@mui/icons-material/LinkedIn';
+declare module '@mui/icons-material/Facebook';

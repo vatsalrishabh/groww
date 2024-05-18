@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                 <img src={mainlogo} alt="" />
             </div>
             <p>
-              Prgrow Solutions is your one-stop destination to search for the
+              Prgrow Insight is your one-stop destination to search for the
               best Home Loans, Personal Loans, and Credit Cards in India. Since
               last years, more than 10K customers have fulfilled their dreams
               with us.
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
 
       {/* copyright sections starts */}
       <div className="Copyright lg:flex w-full justify-around bg-blue-950">
-        <div className="lg:w-1/3 flex justify-center align-middle "><span className="text-white mx-1">© Copyright 2022 by</span> <span className="text-blue-500 ">Prgrow Solutions Pvt. Ltd.</span></div>
+        <div className="lg:w-1/3 flex justify-center align-middle "><span className="text-white mx-1">© Copyright 2022 by</span> <span className="text-blue-500 ">Prgrow Insight Pvt. Ltd.</span></div>
         <div className="lg:w-1/3 flex justify-center align-middle "> <span className="text-gray-400">Design by</span> <span className="text-blue-500 mx-1">RCS info tech</span> </div>
         <div className="lg:w-1/3 flex justify-center align-middle p-2">
           <Link to=""></Link>  <div className="p-2 mx-2 rounded-full bg-slate-600"><FacebookIcon/></div>
