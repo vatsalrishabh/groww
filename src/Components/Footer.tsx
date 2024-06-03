@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import EmailIcon from '@mui/icons-material/Email';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
@@ -12,12 +13,15 @@ import mainlogo from '../assets/mainlogo.jpeg'
 
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
+    
     <>
       {/* Footer blue section */}
       <div className="flex flex-col lg:flex-row bg-blue-600">
         <div className="flex justify-center items-center w-full lg:w-2/3 p-5">
-          <h1 className="text-white text-4xl font-bold font-rajdhani">
+          <h1 className="text-white text-3xl font-bold font-rajdhani">
             Get Business Loans Quickly
           </h1>
         </div>
@@ -25,6 +29,7 @@ const Footer: React.FC = () => {
           <button
             type="button"
             className="px-6 py-3.5 text-2xl font-medium text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center"
+            onClick={()=>navigate(`../applynow`)}
           >
             Apply For Loan
           </button>
@@ -34,10 +39,10 @@ const Footer: React.FC = () => {
 
       {/* Footer middle section */}
       <div className="flex flex-col lg:flex-row bg-slate-600 text-white">
-        <div className="w-full lg:w-1/2 lg:flex">
-          <div className="w-full lg:w-1/2 p-8">
+        <div className="w-full lg:w-2/3 lg:flex">
+          <div className="w-full lg:w-1/2 p-3">
             <div>
-                <img src={mainlogo} alt="" />
+                <img src={mainlogo} alt="" className="h-20 w-20" />
             </div>
             <p>
               Prgrow Insight is your one-stop destination to search for the
@@ -47,9 +52,9 @@ const Footer: React.FC = () => {
             </p>
           </div>
 {/* explore sections belwo */}
-          <div className="w-full lg:w-1/2 p-8">
+          <div className="w-full lg:w-1/3 p-3">
             <div>
-              <h1 className="mb-4 text-3xl font-bold">Explore</h1>
+              <h1 className="mb-2 text-3xl font-bold">Explore</h1>
               <ul>
                 <li className="flex items-center p-3">
                   <ArrowForwardIcon />
@@ -81,7 +86,7 @@ const Footer: React.FC = () => {
         </div>
 {/* contact section below */}
         <div className="w-full lg:w-1/2 lg:flex">
-          <div className="w-full lg:w-1/2 p-8">
+          <div className="w-full lg:w-1/2 p-3">
             <div>
               <h1 className="mb-4 text-3xl font-bold">Latest News</h1>
               <div className="flex items-center mb-4">
@@ -94,7 +99,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 p-8 bg-blue-950 lg:m-10">
+          <div className="w-full lg:px-3  p-3 bg-blue-950 lg:m-10">
             <div className="mb-4 text-3xl font-bold">Contact</div>
             <div className="mb-4 flex border-b border-gray-400 py-2">
                 <div className="m-1"><EmailIcon/></div>
@@ -112,7 +117,7 @@ const Footer: React.FC = () => {
                 <div className="m-1"><LocationOnIcon/></div>
                 <div className="m-1">
     <p><strong>HEAD Office:</strong> NH 31 PILLER NO 52, NEAR GYAN BHARTI (+2) HIGH SCHOOL, KAUSHAL COLONY, HARRAKH, BEGUSARAI, PIN- 851101</p> <br/>
-    <p><strong>Corporate Office:</strong> AZAD MARKET, 1ST FLOOR, PIRMUHANI RAJENDRA PATH, KADAMKUAN, OPPOSITE- UMA CINEMA HALL, PATNA -800003</p>
+    {/* <p><strong>Corporate Office:</strong> AZAD MARKET, 1ST FLOOR, PIRMUHANI RAJENDRA PATH, KADAMKUAN, OPPOSITE- UMA CINEMA HALL, PATNA -800003</p> */}
 </div>
 
             </div>

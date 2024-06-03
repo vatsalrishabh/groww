@@ -6,7 +6,7 @@ const BecomePartner: React.FC = () => {
       <div className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-md lg:flex">
         <div className="lg:w-1/2 pr-8">
           <h1 className="text-3xl font-bold mb-4">Become a Partner</h1>
-          <h2 className="text-xl text-blue-800 mb-6">With UPGROWW PARTNER BUSINESS PROGRAM</h2>
+          <h2 className="text-xl text-blue-800 mb-6">With PRGROW PARTNER BUSINESS PROGRAM</h2>
           <form className="max-w-sm mx-auto">
             <div className="mb-5">
               <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>

@@ -1,22 +1,40 @@
 import React from 'react';
 
-const Gal: React.FC = () => {
+interface GalProps{
+  image1:string,
+  image2:string,
+  image3:string,
+  image4:string,
+
+}
+
+const Gal: React.FC<GalProps> = (props) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-      <div>
-        <img className="h-auto max-w-full w-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+    <div className="flex flex-wrap">
+      <div className="w-full md:w-1/2 lg:w-1/4 p-2">
+        <div className="aspect-w-1 aspect-h-1">
+          <img className="object-cover rounded-lg" src={props.image1} alt="" />
+        </div>
       </div>
-      <div>
-        <img className="h-auto max-w-full w-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
+      <div className="w-full md:w-1/2 lg:w-1/4 p-2">
+        <div className="aspect-w-1 aspect-h-1">
+          <img className="object-cover rounded-lg" src={props.image2} alt="" />
+        </div>
       </div>
-      <div>
-        <img className="h-auto max-w-full w-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="" />
+      <div className="w-full md:w-1/2 lg:w-1/4 p-2">
+        <div className="aspect-w-1 aspect-h-1">
+          <img className="object-cover rounded-lg" src={props.image3} alt="" />
+        </div>
       </div>
-      <div>
-        <img className="h-auto max-w-full w-auto rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="" />
+      <div className="w-full md:w-1/2 lg:w-1/4 p-2">
+        <div className="aspect-w-1 aspect-h-1">
+          <img className="object-cover rounded-lg" src={props.image4} alt="" />
+        </div>
       </div>
     </div>
   );
+  
+  
 };
 
 export default Gal;

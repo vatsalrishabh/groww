@@ -16,11 +16,11 @@ const NewsM = () => {
             <img src={gift} alt="Gift" className="w-full" />
           </div>
           <div className="text-gray-700 mb-6">
-            Upgroww Solutions is your one-stop destination to search for the
+            Prgrow Solutions is your one-stop destination to search for the
             best Home Loans, Personal Loans in India. Since 2021, more than 50
             lakh customers have fulfilled their dreams with us. Our network of
             100+ banks and NBFCs promises the most affordable and suitable
-            finance deal for you. Upgroww helps loan is the lending of money by
+            finance deal for you. Prgrow helps loan is the lending of money by
             one or more individuals, organizations, or other entities to other
             individuals, organizations, etc. The recipient (i.e., the borrower)
             incurs a debt and is usually liable to pay interest on that debt
@@ -34,7 +34,7 @@ const NewsM = () => {
             to them within 24 hours of application.
           </div>
           <div className="text-gray-700 mb-6">
-            Upgroww Solutions is your one-stop destination to search for the
+            Prgrow Solutions is your one-stop destination to search for the
             best Home Loans, Personal Loans and Credit Cards in India. Since
             2021, more than 1K customers have fulfilled their dreams with us.
           </div>

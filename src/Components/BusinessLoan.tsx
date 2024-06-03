@@ -12,7 +12,7 @@ const BusinessLoan: React.FC = () => {
       <SubNav
         main="Home"
         submain="Service Details"
-        heading="Personal Loan Details"
+        heading="Business Loan Details"
         bgimg={subnavbusi}
       />
       <div className="Businessloan lg:flex">

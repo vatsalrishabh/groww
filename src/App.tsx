@@ -10,6 +10,9 @@ import ApplyNow from './Components/ApplyNow';
 import Gallery from './Components/Gallery';
 import News from './Components/News';
 import BusinessLoan from './Components/BusinessLoan';
+import PersonalLoan from './Components/PersonalLoan';
+import HomeLoan from './Components/HomeLoan';
+import AboutUs from './Components/AboutUs';
 
 function App() {
 
@@ -30,6 +33,10 @@ function App() {
         <Route path='/news' element={<News/>} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="services/business" element={<BusinessLoan/>}/>
+        <Route path="services/personal" element={<PersonalLoan/>}/>
+        <Route path="services/home" element={<HomeLoan/>}/>
+        <Route path="about/team" element={<AboutUs/>}/>
+        <Route path="about/company" element={<AboutUs/>}/>
           {/* Add more Route components for additional pages */}
         </Routes>
     

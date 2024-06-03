@@ -24,7 +24,7 @@ const WhyChooseUs: React.FC = () => {
         <div className="lg:w-1/2 pl-4">
           <div className="bg-white rounded-lg p-6">
             <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
-            <p className="mb-6">Upgroww Solutions has created a mark of excellence in providing the best loan deals to our customers across various long ranges of Loan products.</p>
+            <p className="mb-6">Prgrow Solutions has created a mark of excellence in providing the best loan deals to our customers across various long ranges of Loan products.</p>
             <div className="middle flex justify-between mb-6">
               <div className="w-1/3 flex items-start">
                 <div className="icon mt-1"><ArrowRightIcon color="primary"/></div>

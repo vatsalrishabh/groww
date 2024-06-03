@@ -22,7 +22,7 @@ const CalculateEMI: React.FC = () => {
         <div className="mb-6 p-10">
           <h1 className="text-xl mb-2">Company Introductions</h1>
           <h2 className="text-4xl font-rajdhani font-bold mb-4">You’ll never worry about money again.</h2>
-          <p className='py-5'>Upgroww Solutions is your one-stop destination to search for the best Home Loans, Personal Loans in India. Since 2021, more than 50 lakh customers have fulfilled their dreams with us. Our network of 100+ banks and NBFCs promises the most affordable and suitable finance deal for you.</p>
+          <p className='py-5'>Prgrow Solutions is your one-stop destination to search for the best Home Loans, Personal Loans in India. Since 2021, more than 50 lakh customers have fulfilled their dreams with us. Our network of 100+ banks and NBFCs promises the most affordable and suitable finance deal for you.</p>
           <div className='icon-container lg:flex lg:p-5'>
             <div className="flex items-center lg:w-1/2 py-3">
               <div className="mr-4 ">
@@ -49,7 +49,7 @@ const CalculateEMI: React.FC = () => {
         <div className="form mb-6">
           <h1 className="text-2xl font-bold mb-4">Calculate EMI</h1>
           <div className="mb-4">
-            <label htmlFor="loan-amount" className="block text-sm font-medium text-gray-700">Loan Amount (Rs.):</label>
+            <label htmlFor="loan-amount" className="block text-sm font-medium text-gray-700">Loan Amount (Rs.):</label> - {}
             <input type="range" id="loan-amount" min="0" max="100000" value={loanAmount} onChange={(e) => setLoanAmount(parseInt(e.target.value))} className="mt-1 p-2 border border-gray-300 rounded-md w-full" />
           </div>
           <div className="mb-4">
