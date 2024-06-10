@@ -1,77 +1,135 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {  Slider, Typography, Box, Container } from '@mui/material';
+import Finance from 'financejs';
 import loanicon1 from '../assets/calculateemi/loanicon1.png';
 import loanicon2 from '../assets/calculateemi/loanicon2.png';
 
-const CalculateEMI: React.FC = () => {
-  // State for input values and EMI
-  const [loanAmount, setLoanAmount] = useState<number>(0);
-  const [loanTenure, setLoanTenure] = useState<number>(0);
-  const [interestRate, setInterestRate] = useState<number>(0);
-  const [monthlyEMI, setMonthlyEMI] = useState<number | null>(null);
+const CalculateEMI = () => {
+  const [loanAmount, setLoanAmount] = useState(1000000); // Default to 1 lakh
+  const [loanTenure, setLoanTenure] = useState(1); // Default to 1 year
+  const [interestRate, setInterestRate] = useState(7); // Default to 7%
+  const [monthlyEMI, setMonthlyEMI] =  useState<number | null>(null);
 
-  // Function to calculate EMI
   const calculateEMI = () => {
-    // EMI calculation logic (replace with your actual calculation)
-    const emi = loanAmount * interestRate / (loanTenure * 12);
+    const finance = new (Finance as any)();
+    const monthlyRate = interestRate / (12 * 100);
+    const numOfMonths = loanTenure * 12;
+    const emi = finance.AM(loanAmount, monthlyRate, numOfMonths);
     setMonthlyEMI(emi);
   };
 
+  useEffect(() => {
+    calculateEMI();
+  }, [loanAmount, loanTenure, interestRate]);
+
   return (
-    <div className='w-full lg:flex'>
-      <div className="w-full lg:w-1/2 p-6 ">
-        <div className="mb-6 p-10">
-          <h1 className="text-xl mb-2">Company Introductions</h1>
-          <h2 className="text-4xl font-rajdhani font-bold mb-4">You’ll never worry about money again.</h2>
-          <p className='py-5'>Prgrow Solutions is your one-stop destination to search for the best Home Loans, Personal Loans in India. Since 2021, more than 50 lakh customers have fulfilled their dreams with us. Our network of 100+ banks and NBFCs promises the most affordable and suitable finance deal for you.</p>
-          <div className='icon-container lg:flex lg:p-5'>
-            <div className="flex items-center lg:w-1/2 py-3">
-              <div className="mr-4 ">
+    <Container  className="w-full lg:flex">
+  {/* left box starts */}
+      <Box className="w-full lg:w-1/2 mb-6">
+        <Box className="mb-6 p-10">
+          <Typography variant="h5" gutterBottom>Company Introductions</Typography>
+          <Typography variant="h3" gutterBottom>You’ll never worry about money again.</Typography>
+          <Typography variant="body1" paragraph>
+            PR GROW is your one-stop destination to search for the best Home Loans, Personal Loans in India.
+            Since 2021, more than 2000+ customers have fulfilled their dreams with us. Our network of 100+
+            banks and NBFCs promises the most affordable and suitable finance deal for you.
+          </Typography>
+          <Box className='icon-container lg:flex lg:p-5'>
+            <Box className="flex items-center lg:w-1/2 py-3">
+              <Box className="mr-4">
                 <img src={loanicon1} alt="Award Winning" className="h-8" />
-              </div>
-              <div>
-                <h2 className="font-bold text-xl">Award Winning</h2>
-                <p className="text-gray-600">5+</p>
-              </div>
-            </div>
-            <div className="flex items-center lg:w-1/2">
-              <div className="mr-4">
+              </Box>
+              <Box>
+                <Typography variant="h6">Award Winning</Typography>
+                <Typography variant="body2" color="textSecondary">5+</Typography>
+              </Box>
+            </Box>
+            <Box className="flex items-center lg:w-1/2">
+              <Box className="mr-4">
                 <img src={loanicon2} alt="Certified Company" className="h-8" />
-              </div>
-              <div>
-                <h2 className="font-bold text-xl">Certified Company</h2>
-                <p className="text-gray-600">provide loans</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full lg:w-1/2 p-6 bg-white">
-        <div className="form mb-6">
-          <h1 className="text-2xl font-bold mb-4">Calculate EMI</h1>
-          <div className="mb-4">
-            <label htmlFor="loan-amount" className="block text-sm font-medium text-gray-700">Loan Amount (Rs.):</label> - {}
-            <input type="range" id="loan-amount" min="0" max="100000" value={loanAmount} onChange={(e) => setLoanAmount(parseInt(e.target.value))} className="mt-1 p-2 border border-gray-300 rounded-md w-full" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="loan-tenure" className="block text-sm font-medium text-gray-700">Loan Tenure (Year.):</label>
-            <input type="range" id="loan-tenure" min="0" max="30" value={loanTenure} onChange={(e) => setLoanTenure(parseInt(e.target.value))} className="mt-1 p-2 border border-gray-300 rounded-md w-full" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="interest-rate" className="block text-sm font-medium text-gray-700">Interest Rate (%):</label>
-            <input type="range" id="interest-rate" min="0" max="100" value={interestRate} onChange={(e) => setInterestRate(parseInt(e.target.value))} className="mt-1 p-2 border border-gray-300 rounded-md w-full" />
-          </div>
-          <button onClick={calculateEMI} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Calculate EMI</button>
-        </div>
+              </Box>
+              <Box>
+                <Typography variant="h6">Certified Company</Typography>
+                <Typography variant="body2" color="textSecondary">Provide loans</Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+{/* left box ends */}
+
+
+{/* right box starts */}
+      <Box className="w-full lg:w-1/2 p-6 bg-white">
+        <Box className="form mb-6">
+          <Typography variant="h4" gutterBottom>Calculate EMI</Typography>
+          <Box className="mb-4">
+            <Typography gutterBottom>Loan Amount (Rs.):</Typography>
+            <Slider
+              value={loanAmount}
+              onChange={(e, value:any) => setLoanAmount(value)}
+              min={100000}
+              max={6000000}
+              step={10000}
+              marks={[
+                { value: 100000, label: '1L' },
+                { value: 6000000, label: '60L' },
+              ]}
+              valueLabelDisplay="auto"
+            />
+          </Box>
+          <Box className="mb-4">
+            <Typography gutterBottom>Loan Tenure (Years):</Typography>
+            <Slider
+              value={loanTenure}
+              onChange={(e, value:any) => setLoanTenure(value)}
+              min={1}
+              max={30}
+              marks={[
+                { value: 1, label: '1Y' },
+                { value: 30, label: '30Y' },
+              ]}
+              valueLabelDisplay="auto"
+            />
+          </Box>
+          <Box className="mb-4">
+            <Typography gutterBottom>Interest Rate (%):</Typography>
+            <Slider
+              value={interestRate}
+              onChange={(e, value:any) => setInterestRate(value)}
+              min={7}
+              max={30}
+              step={0.1}
+              marks={[
+                { value: 7, label: '7%' },
+                { value: 30, label: '30%' },
+              ]}
+              valueLabelDisplay="auto"
+            />
+          </Box>
+        </Box>
         {monthlyEMI !== null && (
-          <div className="form-output mb-6">
-            <div className="text-gray-700 mb-2">Monthly Loan EMI: {monthlyEMI.toFixed(2)}</div>
-            <div className="text-gray-700 mb-2">Principle Amount: {loanAmount}</div>
-            <div className="text-gray-700 mb-2">Loan on Interest: {monthlyEMI - loanAmount}</div>
-            <div className="text-gray-700">Total Amount to be paid: {monthlyEMI.toFixed(2)}</div>
-          </div>
-        )}
-      </div>
-    </div>
+  <Box className="form-output mb-6">
+    <Typography variant="h6" color="textSecondary" gutterBottom>
+      Monthly Loan EMI: ₹{typeof monthlyEMI === 'number' ? monthlyEMI.toFixed(2) : ''}
+    </Typography>
+    <Typography variant="body1" color="textSecondary" gutterBottom>
+      Principle Amount: ₹{loanAmount}
+    </Typography>
+    <Typography variant="body1" color="textSecondary" gutterBottom>
+      Loan on Interest: ₹{typeof monthlyEMI === 'number' ? ((monthlyEMI * loanTenure * 12 - loanAmount).toFixed(2)) : ''}
+    </Typography>
+    <Typography variant="body1" color="textSecondary">
+      Total Amount to be Paid: ₹{typeof monthlyEMI === 'number' ? ((monthlyEMI * loanTenure * 12).toFixed(2)) : ''}
+    </Typography>
+  </Box>
+)}
+
+      </Box>
+{/* right box ends */}
+
+
+    </Container>
   );
 };
 

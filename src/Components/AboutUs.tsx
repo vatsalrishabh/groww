@@ -8,8 +8,8 @@ const AboutUs = () => {
     <div className='Aboutus'>
         <SubNav
         main="Home"
-        submain="Prgrow Details"
-        heading="Prgrow Details"
+        submain="PR grow Details"
+        heading="PR grow Details"
         bgimg={aboutus}
       />
 {/* main content starts */}
@@ -34,13 +34,13 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="business-heading p-10">
-            <h1 className="text-4xl font-bold ">Prgrow Overview:</h1>
+            <h1 className="text-4xl font-bold ">PR grow Overview:</h1>
             <p className="lg:p-10 p-2 py-10">
-            Prgrow is a leading financial services provider in Bihar, dedicated to empowering individuals and businesses with access to a wide range of financial solutions. With a focus on innovation and customer-centricity, Prgrow offers personalized services to meet the diverse needs of its clients.
+            PR grow is a leading financial services provider in Bihar, dedicated to empowering individuals and businesses with access to a wide range of financial solutions. With a focus on innovation and customer-centricity, PR grow offers personalized services to meet the diverse needs of its clients.
             </p>
             <p className="lg:p-10 p-2 py-10">
-            Prgrow Solutions:
-Prgrow Solutions serves as a comprehensive platform for accessing various financial products, including Personal Loans, Business Loans, Home Loans, Auto Loans, and more. Since its inception, Prgrow has helped thousands of customers fulfill their financial goals and aspirations.
+            PR grow Solutions:
+PR grow Solutions serves as a comprehensive platform for accessing various financial products, including Personal Loans, Business Loans, Home Loans, Auto Loans, and more. Since its inception, PR grow has helped thousands of customers fulfill their financial goals and aspirations.
 
 
             </p>
@@ -54,20 +54,20 @@ Prgrow Solutions serves as a comprehensive platform for accessing various financ
                 <div className="bg-blue-600 rounded-full">
                   {/* <ChevronRightIcon sx={{ color: "white" }} /> */}
                 </div>
-                <div className="p-2 "> 90% Consultancy: Prgrow's team of experienced consultants offers personalized guidance and support throughout the loan application process.</div>
+                <div className="p-2 "> 90% Consultancy: PR grow's team of experienced consultants offers personalized guidance and support throughout the loan application process.</div>
               </li>
               <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">
                   {/* <ChevronRightIcon sx={{ color: "white" }} /> */}
                 </div>
-                <div className="p-2"> 76% Financial Services: With a robust portfolio of financial services, Prgrow caters to the diverse needs of its customers, ensuring access to the right solutions.</div>
+                <div className="p-2"> 76% Financial Services: With a robust portfolio of financial services, PR grow caters to the diverse needs of its customers, ensuring access to the right solutions.</div>
               </li>
 
               <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">
                   {/* <ChevronRightIcon sx={{ color: "white" }} /> */}
                 </div>
-                <div className="p-2"> 85% Customer Satisfaction: Prgrow is committed to delivering exceptional customer satisfaction, providing a seamless and hassle-free experience for all clients.</div>
+                <div className="p-2"> 85% Customer Satisfaction: PR grow is committed to delivering exceptional customer satisfaction, providing a seamless and hassle-free experience for all clients.</div>
               </li>
               {/* <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">

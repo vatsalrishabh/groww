@@ -16,7 +16,7 @@ const CustomeService:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
         
           <div className="text-gray-600">“I am happy with the overall service provided by cashkumar. always in touch and kept me updated on the loan status. recommend people to use it.”</div>
-          <div className="text-2xl font-semibold text-blue-800 my-5">Sonu Singh</div>
+          <div className="text-2xl font-semibold text-blue-800 my-5">Dr. Anjani Kumar</div>
           <div className="flex justify-end mt-4">
           <div className='rounded-full bg-blue-600 white-svg'>
           <FormatQuoteIcon sx={{ fontSize: 40 }}  />
@@ -30,7 +30,7 @@ const CustomeService:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
         
           <div className="text-gray-600">“Easy platform and great service. Thanks for helping me really quick. Shall recommend to my friends for certain.”</div>
-          <div className="text-2xl font-semibold text-blue-800 my-5">Harkesh Pandey</div>
+          <div className="text-2xl font-semibold text-blue-800 my-5">Suresh Kumar Singh</div>
           <div className="flex justify-end mt-4">
           <div className='rounded-full bg-blue-600 white-svg'>
           <FormatQuoteIcon sx={{ fontSize: 40 }}  />
@@ -44,7 +44,7 @@ const CustomeService:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
         
           <div className="text-gray-600">“Good site to get loans online. My Personal loan was processed in a week's time and I got best offers for being an Infosys employee. Good work team!”</div>
-          <div className="text-2xl font-semibold text-blue-800 my-5">Praveen Sinha</div>
+          <div className="text-2xl font-semibold text-blue-800 my-5">Aman Kumar</div>
           <div className="flex justify-end mt-4">
             <div className='rounded-full bg-blue-600 white-svg'>
             <FormatQuoteIcon sx={{ fontSize: 40 }}  />

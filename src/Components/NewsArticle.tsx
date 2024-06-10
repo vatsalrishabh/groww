@@ -44,7 +44,7 @@ const NewsArticle: React.FC = () => {
                 <div className="mr-2"><PersonIcon color="primary" sx={{fontSize:20}} />Admin</div>
                 <div className=''><CreditCardIcon color="primary" sx={{fontSize:20}} />Home loan</div>
               </div>
-              <div className="text-xl font-semibold text-blue-900 mb-4">How To Apply Auto loan.</div>
+              <div className="text-xl font-semibold text-blue-900 mb-4">How To Apply Home loan.</div>
               <div className="flex justify-between">
                 <div className="left text-gray-500"><ArrowForwardIcon color="primary" sx={{fontSize:20}}/>Read More</div>
                 <div className="right text-gray-500"><ForumIcon color="primary" sx={{fontSize:20}}/>0 Comments</div>
@@ -62,7 +62,7 @@ const NewsArticle: React.FC = () => {
                 <div className="mr-2"><PersonIcon color="primary" sx={{fontSize:20}} /> Admin</div>
                 <div><CreditCardIcon color="primary" sx={{fontSize:20}} />Business loan</div>
               </div>
-              <div className="text-xl font-semibold text-blue-900 mb-4">How To Apply Auto loan.</div>
+              <div className="text-xl font-semibold text-blue-900 mb-4">How To Apply Business loan.</div>
               <div className="flex justify-between">
                 <div className="left text-gray-500"><ArrowForwardIcon color="primary" sx={{fontSize:20}}/>Read More</div>
                 <div className="right text-gray-500"><ForumIcon color="primary" sx={{fontSize:20}}/>0 Comments</div>

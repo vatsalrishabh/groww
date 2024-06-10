@@ -13,6 +13,7 @@ import BusinessLoan from './Components/BusinessLoan';
 import PersonalLoan from './Components/PersonalLoan';
 import HomeLoan from './Components/HomeLoan';
 import AboutUs from './Components/AboutUs';
+import FixedWC from './Components/FixedWC';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
       <div className='App'>
         <Nv />
         <Navbar />
-
+<FixedWC/>
 
         <Routes>
         <Route path="/" element={<Home />} />

@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <h2 className="font-bold text-blue-950 text-xl">Call 24/7</h2>
-            <h4 className='text-gray-600'>+91 9693270258</h4>
+            <h4 className='text-gray-600'>+91 91134 53768</h4>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <h2 className="font-bold text-blue-950 text-xl">Visit Office</h2>
-            <h4 className='text-gray-600'>Office No - 5th Floor, Ravi Complex above Bata, Kurji More, Patliputra Industrial estate, Patna - 800010</h4>
+            <h4 className='text-gray-600'> NH 31 PILLER NO 52, NEAR GYAN BHARTI (+2) HIGH SCHOOL, KAUSHAL COLONY, HARRAKH, BEGUSARAI, PIN- 851101</h4>
           </div>
         </div>
       </div>

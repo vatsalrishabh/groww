@@ -19,9 +19,9 @@ const Counting: React.FC = () => {
       } else {
         // Increase the count by a random value between 1 to 5 until the end time
         setLoanApprovals((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 98)); // Upper limit 100
-        setBanks((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 50)); // Upper limit 100
-        setCustomers((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 270000)); // Upper limit 100
-        setStaffMembers((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 200)); // Upper limit 100
+        setBanks((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 100)); // Upper limit 100
+        setCustomers((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 1000)); // Upper limit 100
+        setStaffMembers((prev) => Math.min(prev + Math.floor(Math.random() * 5) + 1, 50)); // Upper limit 100
       }
     }, 100); // Update count every 100 milliseconds
 

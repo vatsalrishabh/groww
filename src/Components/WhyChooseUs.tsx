@@ -12,7 +12,7 @@ const WhyChooseUs: React.FC = () => {
           <div className="bg-blue-800 rounded-lg p-6 flex items-center justify-center mb-4">
             <div className="icon-work flex items-center">
               <div className='icon mr-4'><SavingsIcon sx={{fontSize: 40, color: 'white'}} /></div>
-              <div className='text-white text-2xl'>26 years of working experience</div>
+              <div className='text-white text-2xl'>4 years of working experience</div>
             </div>
           </div>
           <div className="bg-blue-800 rounded-lg p-6 mb-4">

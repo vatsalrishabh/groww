@@ -13,3 +13,5 @@ declare module '@mui/icons-material/ChevronRight';
 declare module '@mui/icons-material/LinkedIn';
 declare module '@mui/icons-material/Facebook';
 declare module '@mui/icons-material/SupportAgent';
+declare module '@mui/icons-material/WhatsApp';
+declare module '@mui/icons-material/AddIcCall';

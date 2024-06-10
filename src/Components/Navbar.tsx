@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CallIcon from '@mui/icons-material/Call';
+import './Navbar.css'
 
 const Navbar: React.FC = () => {
   const [userDropdownVisible, setUserDropdownVisible] = useState(false);
@@ -74,7 +75,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Prgrow</span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PR GROW <p className='text-sm pl-6 text-stone-500	'>WE GROW TOGETHER</p></span>
           </Link>
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
@@ -119,8 +120,12 @@ const Navbar: React.FC = () => {
                 {servicesDropdownVisible && (
                   <ul ref={servicesDropdownRef} className="absolute left-0 mt-2 w-48 z-10 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600">
                     <li><Link to="/services/personal" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Personal Loan</Link></li>
+                    <li><Link to="/services/doctor" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Doctor Loan</Link></li>
                     <li><Link to="/services/home" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Home Loan</Link></li>
                     <li><Link to="/services/business" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Business Loan</Link></li>
+                    <li><Link to="/services/mortgage" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Mortgage Loan</Link></li>
+                    <li><Link to="/services/sme" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">SME Loan</Link></li>
+                    <li><Link to="/services/working-capital" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Working Capital Loan</Link></li>
                     {/* <li><Link to="/services/auto-loan" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Auto Loan</Link></li> */}
                   </ul>
                 )}
@@ -144,11 +149,13 @@ const Navbar: React.FC = () => {
                  <CallIcon color="success" sx={{ fontSize: 40 }} />
               </li>
             <Link to="tel:9113453768">
-              <li>
-                  Call us 24/7
-                  <br />
-                 <h1 className='text-2xl'> 91134 53768</h1>
-              </li>
+            <li className=' text-black pl-5'>
+              <span className='res-text'>Call us 24/7</span>
+    
+    <br />
+    <span className='text-2xl res-text'>91134 53768</span>
+    </li>
+
             </Link>
             </ul>
           </div>
