@@ -1,13 +1,41 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const BecomePartner: React.FC = () => {
-  const [profession, setProfession] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    number: '',
+    profession: '',
+    otherProfession: 'Other',
+  });
+
   const [showOtherProfession, setShowOtherProfession] = useState(false);
 
-  const handleProfessionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedProfession = event.target.value;
-    setProfession(selectedProfession);
-    setShowOtherProfession(selectedProfession === 'Others');
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { id, value } = event.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [id]: value,
+    }));
+    if (id === 'profession') {
+      setShowOtherProfession(value === 'Others');
+    }
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    emailjs.send(
+      'service_7s3arwp', // Replace with your EmailJS service ID
+      'template_3222uwp', // Replace with your EmailJS template ID
+      formData,
+      'isnjSagzDCz5gRdZU' // Replace with your EmailJS user ID
+    )
+    .then((result) => {
+      console.log('Email sent successfully:', result.text);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error.text);
+    });
   };
 
   return (
@@ -16,18 +44,18 @@ const BecomePartner: React.FC = () => {
         <div className="lg:w-1/2 pr-8">
           <h1 className="text-3xl font-bold mb-4">Become a Partner</h1>
           <h2 className="text-xl text-blue-800 mb-6">With PR GROW PARTNER BUSINESS PROGRAM</h2>
-          <form className="max-w-sm mx-auto">
+          <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
             <div className="mb-5">
               <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
-              <input type="text" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Vatsal Rishabh" required />
+              <input type="text" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
             </div>
             <div className="mb-5">
               <label htmlFor="number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Number</label>
-              <input type="tel" id="number" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="+918123573669" required />
+              <input type="tel" id="number" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" value={formData.number} onChange={handleChange} placeholder="+1234567890" required />
             </div>
             <div className="mb-5">
               <label htmlFor="profession" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select Your Profession</label>
-              <select id="profession" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" value={profession} onChange={handleProfessionChange} required>
+              <select id="profession" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" value={formData.profession} onChange={handleChange} required>
                 <option value="">Select...</option>
                 <option value="Direct Selling Agent">Direct Selling Agent</option>
                 <option value="Insurance Agent">Insurance Agent</option>
@@ -41,7 +69,7 @@ const BecomePartner: React.FC = () => {
             {showOtherProfession && (
               <div className="mb-5">
                 <label htmlFor="otherProfession" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Please specify your profession</label>
-                <input type="text" id="otherProfession" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Your Profession" required />
+                <input type="text" id="otherProfession" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" value={formData.otherProfession} onChange={handleChange} placeholder="Your Profession" required />
               </div>
             )}
             <div className="flex items-start mb-5">

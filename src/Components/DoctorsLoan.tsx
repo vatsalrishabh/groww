@@ -1,26 +1,26 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import business from "../assets/Business/business.webp";
 import SubNav from "./SubNav";
-import subnavbusi from "../assets/Business/subnavbusi.jpg";
+import doctor from "../assets/Doctor/doctor.webp";
 import transpar from "../assets/Business/transpar.avif";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
-const BusinessLoan: React.FC = () => {
+const DoctorsLoan: React.FC = () => {
   return (
     <>
       <SubNav
         main="Home"
         submain="Service Details"
-        heading="Business Loan Details"
-        bgimg={subnavbusi}
+        heading="Doctors Loan Details"
+        bgimg={doctor}
       />
       <div className="Businessloan lg:flex">
         <div className="lg:w-1/3 bg-gray-200">
           <div className="options p-5 flex justify-end w-full py-10">
-            {/* the vertical nav box starts */}
-            <div className="put-me-right lg:w-2/3 w-full">
+           {/* the vertical nav box starts */}
+           <div className="put-me-right lg:w-2/3 w-full">
               {/*1. personal loan starts */}
               <Link to="../services/personal">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
@@ -104,8 +104,6 @@ const BusinessLoan: React.FC = () => {
             </div>
             {/* the vertical nav box ends */}
           </div>
-
-
           {/* the second box in left side  */}
           <div className="contact p-5 flex justify-end w-full py-10">
             <div className="put-me-right w-full">
@@ -156,52 +154,44 @@ const BusinessLoan: React.FC = () => {
             </div>
           </div>
           <div className="business-heading p-10">
-            <h1 className="text-4xl font-bold ">Business </h1>
+            <h1 className="text-4xl font-bold ">Doctors Loan</h1>
             <p className="lg:p-10 p-2 py-10">
-              Empower your business and elevate it to new heights with a capital
-              infusion from PR GROW Company’s fast, unsecured Business Loans. We
-              offer both offline and online Business Loans in India specifically
-              tailored for the MSME sector, designed to meet your unique needs.
-              PR GROW Company provides business owners and entrepreneurs with
-              easy access to Business Loans in India, offering quick and small
-              Business Loans to ensure that funding is never a barrier to your
-              success. Our process is optimized at every step to ensure a
-              hassle-free and time-efficient experience. You can apply for a
-              Business Loan online in just a few minutes, receive fast approval,
-              and have the entire amount disbursed quickly. Trust PR GROW
-              Company’s Business Loans in emergencies and rest assured that a
-              lack of capital will never stand in your way.
+            Doctors Loans from Prgrow are an unsecured form of credit, making them an ideal solution to meet immediate financial needs. These loans are versatile and can be used for a variety of purposes, such as weddings, home renovations, travel expenses, and more. With Prgrow Doctors Loans, there are no restrictions on how the borrowed amount is used, providing you with the freedom to allocate funds as you see fit.
+
+One significant advantage of a Prgrow Doctors Loan is the potential to build your credit more quickly compared to other forms of credit. This is due to the higher risk associated with unsecured loans, which, when managed well, can positively impact your credit score. Prgrow Doctors Loans are designed to be accessible, with minimal documentation required, fast processing times, and immediate disbursal to your bank account. 
+
+Whether you need funds urgently for an unexpected expense or to achieve a personal goal, Prgrow Doctors Loans offer a straightforward and efficient way to access the money you need quickly. Choose Prgrow for a reliable and flexible financial solution to meet your immediate requirements.
             </p>
           </div>
 
           {/* right side  */}
           <div className="business-heading p-10">
-            <h1 className="text-4xl font-bold ">Types of Business loan </h1>
+            <h1 className="text-4xl font-bold ">Types of Doctors Loan</h1>
             <ul className="p-10">
               <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">
                   <ChevronRightIcon sx={{ color: "white" }} />
                 </div>
-                <div className="px-2"> Term Loan:</div>
+                <div className="px-2"> Loan for wedding</div>
               </li>
               <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">
                   <ChevronRightIcon sx={{ color: "white" }} />
                 </div>
-                <div className="px-2"> Working Capital:</div>
+                <div className="px-2"> Fresh Funding</div>
               </li>
 
               <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">
                   <ChevronRightIcon sx={{ color: "white" }} />
                 </div>
-                <div className="px-2"> Line of Credit:</div>
+                <div className="px-2"> Home Improvement</div>
               </li>
               <li className="flex py-1">
                 <div className="bg-blue-600 rounded-full">
                   <ChevronRightIcon sx={{ color: "white" }} />
                 </div>
-                <div className="px-2"> Equipment Finance:</div>
+                <div className="px-2">Loan for Travel</div>
               </li>
             </ul>
           </div>
@@ -210,20 +200,20 @@ const BusinessLoan: React.FC = () => {
           {/* right side  */}
           <div className="business-heading lg:p-10 ">
             <h1 className="text-4xl font-bold px-10">
-              Business Loan - Eligibility{" "}
+            Doctors Loan - Eligibility{" "}
             </h1>
             <ul className="py-10">
-              <div className="flex">
-                <div className="bg-blue-600 rounded-full w-6 h-6 flex justify-center align-middle">
-                  <ChevronRightIcon sx={{ color: "white" }} />
-                </div>
-                <li className="flex py-1">
-                  <div className="px-2">
-                    {" "}
-                    The individual should be a minimum of 18 - 25 years of age
+                <div className="flex">
+                  <div className="bg-blue-600 rounded-full w-6 h-6 flex justify-center align-middle">
+                    <ChevronRightIcon sx={{ color: "white" }} />
                   </div>
-                </li>
-              </div>
+                  <li className="flex py-1">
+                    <div className="px-2">
+                      {" "}
+                      The individual should be a minimum of 18 - 25 years of age
+                    </div>
+                  </li>
+                </div>
               <div className="flex">
                 <div className="bg-blue-600 rounded-full w-6 h-6 flex justify-center align-middle">
                   <ChevronRightIcon sx={{ color: "white" }} />
@@ -274,6 +264,8 @@ const BusinessLoan: React.FC = () => {
           </div>
           {/* business class heading */}
         </div>
+          {/* right ends */}
+
       </div>
 
       <Footer />
@@ -281,4 +273,4 @@ const BusinessLoan: React.FC = () => {
   );
 };
 
-export default BusinessLoan;
+export default DoctorsLoan;

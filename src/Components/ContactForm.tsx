@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import emailjs from 'emailjs-com';
 
 const ContactForm: React.FC = () => {
+  const [contactForm,setContactForm] = useState({
+    name:'',
+    number:'',
+    email:'',
+    subject:'',
+    message:'',
+  });
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -66,7 +75,7 @@ const ContactForm: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-user"></i>
                 </span>
-                <input type="text" name="name" placeholder='Name' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" />
+                <input type="text" name="name" placeholder='Name' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
               </div>
             </div>
             <div className="mb-4">
@@ -74,7 +83,7 @@ const ContactForm: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-phone"></i>
                 </span>
-                <input type="tel" name="phone" placeholder='Number' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" />
+                <input type="tel" name="phone" placeholder='Number' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"  value={contactForm.number} onChange={(e)=>setContactForm({...contactForm, number: e.target.value})} />
               </div>
             </div>
             <div className="mb-4">
@@ -82,7 +91,7 @@ const ContactForm: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-envelope"></i>
                 </span>
-                <input type="email" name="email" placeholder='Email' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" />
+                <input type="email" name="email" placeholder='Email' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"  value={contactForm.email} onChange={(e)=>setContactForm({...contactForm, email: e.target.value})}/>
               </div>
             </div>
             <div className="mb-4">
@@ -90,7 +99,7 @@ const ContactForm: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-tag"></i>
                 </span>
-                <input type="text" name="subject" placeholder='Subject' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" />
+                <input type="text" name="subject" placeholder='Subject' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"  value={contactForm.subject} onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
               </div>
             </div>
             <div className="mb-4">
@@ -98,7 +107,7 @@ const ContactForm: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-comment"></i>
                 </span>
-                <textarea name="message" placeholder='Message' rows={4} className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"></textarea>
+                <textarea name="message" placeholder='Message' rows={4} className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"  value={contactForm.message} onChange={(e)=>setContactForm({...contactForm, message: e.target.value})}></textarea>
               </div>
             </div>
             <div className="text-center">
@@ -118,4 +127,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-

@@ -1,4 +1,5 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import business from "../assets/Business/business.webp";
 import SubNav from "./SubNav";
@@ -18,50 +19,90 @@ const PersonalLoan: React.FC = () => {
       <div className="Businessloan lg:flex">
         <div className="lg:w-1/3 bg-gray-200">
           <div className="options p-5 flex justify-end w-full py-10">
-            {/* the vertical nav box starts */}
-            <div className="put-me-right lg:w-2/3 w-full">
+           {/* the vertical nav box starts */}
+           <div className="put-me-right lg:w-2/3 w-full">
+              {/*1. personal loan starts */}
+              <Link to="../services/personal">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
                 <div className="flex items-center p-2">Personal Loan</div>
                 <div className="icon flex items-center p-2 ">
                   <ChevronRightIcon />
                 </div>
               </div>
+              </Link>
+              {/*1. personal loan ends */}
 
+              {/*2. doctor loan starts */}
+              <Link to="../services/doctor">
+              <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
+                <div className="flex items-center p-2">Doctors Loan</div>
+                <div className="icon flex items-center p-2 ">
+                  <ChevronRightIcon />
+                </div>
+              </div>
+              </Link>
+              {/*2. doctor loan ends */}
+
+              {/*3. Home loan starts */}
+              <Link to="../services/home">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
                 <div className="flex items-center p-2 ">Home Loan</div>
                 <div className="icon flex items-center p-2">
                   <ChevronRightIcon />
                 </div>
               </div>
+              </Link>
+              {/*3. Home loan ends */}
 
+              {/*4. Business loan starts */}
+              <Link to="../services/business">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
-                <div className="flex items-center p-2">Auto Loan</div>
+                <div className="flex items-center p-2">Business Loan</div>
                 <div className="icon flex items-center p-2">
                   <ChevronRightIcon />
                 </div>
               </div>
+              </Link>
+              {/*4. Business loan ends */}
 
+              {/*5. Mortgage loan starts */}
+              <Link to="../services/mortgage">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
-                <div className="flex items-center p-2"> LAP Loan</div>
+                <div className="flex items-center p-2"> Mortgage Loan</div>
                 <div className="icon flex items-center p-2">
                   <ChevronRightIcon />
                 </div>
               </div>
+              </Link>
+              {/*5. Mortgage loan ends */}
 
+              {/*6. SME loan starts */}
+              <Link to="../services/sme">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
-                <div className="flex items-center p-2">Doctors Loan</div>
+                <div className="flex items-center p-2">SME Loan</div>
                 <div className="icon flex items-center p-2">
                   <ChevronRightIcon />
                 </div>
               </div>
+              </Link>
+              {/*6. SME loan ends */}
 
+              {/*7. Working Capital loan starts */}
+              <Link to="../services/working-capital">
               <div className="box bg-white m-2 h-14 w-full flex justify-between border-l-4 border-transparent hover:border-blue-500 hover:text-blue-500">
-                <div className="flex items-center p-2">SEP Loan</div>
+                <div className="flex items-center p-2">
+                  Working Capital Loan
+                </div>
                 <div className="icon flex items-center p-2">
                   <ChevronRightIcon />
                 </div>
               </div>
+              </Link>
+  {/*7. Working Capital loan ends*/}
+
+
             </div>
+            {/* the vertical nav box ends */}
           </div>
           {/* the second box in left side  */}
           <div className="contact p-5 flex justify-end w-full py-10">
@@ -223,6 +264,8 @@ Whether you need funds urgently for an unexpected expense or to achieve a person
           </div>
           {/* business class heading */}
         </div>
+          {/* right ends */}
+
       </div>
 
       <Footer />

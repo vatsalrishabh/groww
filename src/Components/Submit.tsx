@@ -86,18 +86,29 @@ const Submit: React.FC = () => {
                 placeholder="Name"
               />
             </div>
+
             <div className="w-full md:w-1/2 px-4 mb-6">
-              <label htmlFor="loan-type" className="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Loan Type*</label>
-              <input
-                type="text"
-                id="loan-type"
-                name="loan_type"
-                value={loanType}
-                onChange={(e) => setLoanType(e.target.value)}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Loan Type"
-              />
-            </div>
+  <label htmlFor="loan-type" className="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Loan Type*</label>
+  <select
+    id="loan-type"
+    name="loan_type"
+    value={loanType}
+    onChange={(e) => setLoanType(e.target.value)}
+    className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+  >
+    <option value="" disabled>Select Loan Type</option>
+    <option value="Personal Loan">Personal Loan</option>
+    <option value="Doctors Loan">Doctors Loan</option>
+    <option value="Home Loan">Home Loan</option>
+    <option value="Business Loan">Business Loan</option>
+    <option value="Mortgage Loan">Mortgage Loan</option>
+    <option value="SME Loan">SME Loan</option>
+    <option value="Working Capital Loan">Working Capital Loan</option>
+    {/* Add more options as needed */}
+  </select>
+</div>
+
+
             <div className="w-full md:w-1/2 px-4 mb-6">
               <label htmlFor="loan-amount" className="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Loan Amount*</label>
               <input
