@@ -22,8 +22,8 @@ const Submit: React.FC = () => {
       loan_amount: loanAmount,
       user_email: email,
       user_phone: phoneNumber, // Added phone number field
-      to_name: "Prgrow Team",
-      from_name: "Prgrow || Loan made easy",
+      to_name: "PR GROW Team",
+      from_name: "PR GROW || Loan made easy",
       to_email: "Prgrowinsightprivatelimited@gmail.com",
       reply: email,
     };

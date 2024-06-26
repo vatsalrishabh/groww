@@ -156,11 +156,11 @@ const HomeLoan: React.FC = () => {
           <div className="business-heading p-10">
             <h1 className="text-4xl font-bold ">Home Loan</h1>
             <p className="lg:p-10 p-2 py-10">
-            Achieve the milestone of owning a home with ease, thanks to Prgrow. Our home loan is the ideal financing solution for all your housing needs. With straightforward requirements, quick processing, and online application options, the process is hassle-free. Simply determine the amount you need and apply online in just five simple steps.
+            Achieve the milestone of owning a home with ease, thanks to PR GROW. Our home loan is the ideal financing solution for all your housing needs. With straightforward requirements, quick processing, and online application options, the process is hassle-free. Simply determine the amount you need and apply online in just five simple steps.
 
-Prgrow offers home loans to buy, build, or renovate your home. We provide flexible tenure options and competitive rates, ensuring that your loan remains affordable. Transparency is at the heart of our operations—there are no hidden charges, guaranteed. 
+PR GROW offers home loans to buy, build, or renovate your home. We provide flexible tenure options and competitive rates, ensuring that your loan remains affordable. Transparency is at the heart of our operations—there are no hidden charges, guaranteed. 
 
-With our personalized home loan options, owning your dream home is more accessible than ever. Choose Prgrow for a seamless, transparent, and efficient home loan experience.
+With our personalized home loan options, owning your dream home is more accessible than ever. Choose PR GROW for a seamless, transparent, and efficient home loan experience.
             </p>
           </div>
 

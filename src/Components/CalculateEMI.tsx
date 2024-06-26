@@ -3,6 +3,7 @@ import {  Slider, Typography, Box, Container } from '@mui/material';
 import Finance from 'financejs';
 import loanicon1 from '../assets/calculateemi/loanicon1.png';
 import loanicon2 from '../assets/calculateemi/loanicon2.png';
+import PieChart from './PieChart';
 
 const CalculateEMI = () => {
   const [loanAmount, setLoanAmount] = useState(1000000); // Default to 1 lakh
@@ -23,9 +24,10 @@ const CalculateEMI = () => {
   }, [loanAmount, loanTenure, interestRate]);
 
   return (
-    <Container  className="w-full lg:flex">
+    <div  className="w-full lg:flex ">
   {/* left box starts */}
-      <Box className="w-full lg:w-1/2 mb-6">
+<div className="allLeft lg:w-1/2">
+      <Box className="w-full  mb-6">
         <Box className="mb-6 p-10">
           <Typography variant="h5" gutterBottom>Company Introductions</Typography>
           <Typography variant="h3" gutterBottom>You’ll never worry about money again.</Typography>
@@ -56,18 +58,22 @@ const CalculateEMI = () => {
           </Box>
         </Box>
       </Box>
+</div>
 {/* left box ends */}
 
 
 {/* right box starts */}
-      <Box className="w-full lg:w-1/2 p-6 bg-white">
+<div className="allRight lg:w-1/2">
+      <Box className="w-full  p-6 bg-white">
         <Box className="form mb-6">
           <Typography variant="h4" gutterBottom>Calculate EMI</Typography>
           <Box className="mb-4">
             <Typography gutterBottom>Loan Amount (Rs.):</Typography>
             <Slider
               value={loanAmount}
-              onChange={(e, value:any) => setLoanAmount(value)}
+              onChange={(e, value:any) => {setLoanAmount(value);
+                console.log(e);
+              }}
               min={100000}
               max={6000000}
               step={10000}
@@ -82,7 +88,9 @@ const CalculateEMI = () => {
             <Typography gutterBottom>Loan Tenure (Years):</Typography>
             <Slider
               value={loanTenure}
-              onChange={(e, value:any) => setLoanTenure(value)}
+              onChange={(e, value:any) => {setLoanTenure(value);
+                console.log(e);
+              }}
               min={1}
               max={30}
               marks={[
@@ -96,7 +104,9 @@ const CalculateEMI = () => {
             <Typography gutterBottom>Interest Rate (%):</Typography>
             <Slider
               value={interestRate}
-              onChange={(e, value:any) => setInterestRate(value)}
+              onChange={(e, value:any) =>{setInterestRate(value);
+                console.log(e);
+              } }
               min={7}
               max={30}
               step={0.1}
@@ -120,16 +130,21 @@ const CalculateEMI = () => {
       Loan on Interest: ₹{typeof monthlyEMI === 'number' ? ((monthlyEMI * loanTenure * 12 - loanAmount).toFixed(2)) : ''}
     </Typography>
     <Typography variant="body1" color="textSecondary">
-      Total Amount to be Paid: ₹{typeof monthlyEMI === 'number' ? ((monthlyEMI * loanTenure * 12).toFixed(2)) : ''}
+      Total Amount to be Paid including interest ₹{typeof monthlyEMI === 'number' ? ((monthlyEMI * loanTenure * 12).toFixed(2)) : ''}
     </Typography>
   </Box>
 )}
+</Box>
 
-      </Box>
+
+  <div className='w-28 h-28'>
+ <PieChart/>
+  </div>
+</div>
 {/* right box ends */}
 
 
-    </Container>
+    </div>
   );
 };
 

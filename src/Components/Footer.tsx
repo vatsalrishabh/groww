@@ -1,22 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import EmailIcon from '@mui/icons-material/Email';
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import XIcon from '@mui/icons-material/X';
-import PinterestIcon from '@mui/icons-material/Pinterest';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import mainlogo from '../assets/mainlogo.jpeg'
-
+import EmailIcon from "@mui/icons-material/Email";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import mainlogo from "../assets/mainlogo.jpeg";
+import prgrow from '../assets/prgrow.png'
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    
     <>
       {/* Footer blue section */}
       <div className="flex flex-col lg:flex-row bg-blue-600">
@@ -29,7 +28,7 @@ const Footer: React.FC = () => {
           <button
             type="button"
             className="px-6 py-3.5 text-2xl font-medium text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center"
-            onClick={()=>navigate(`../applynow`)}
+            onClick={() => navigate(`../applynow`)}
           >
             Apply For Loan
           </button>
@@ -42,16 +41,70 @@ const Footer: React.FC = () => {
         <div className="w-full lg:w-2/3 lg:flex">
           <div className="w-full lg:w-1/2 p-3">
             <div>
-                <img src={mainlogo} alt="" className="h-20 w-20" />
+              <img src={prgrow} alt="" className="h-20 w-20" />
             </div>
             <p>
-              Prgrow Insight is your one-stop destination to search for the
-              best Home Loans, Personal Loans, and Credit Cards in India. Since
-              last years, more than 10K customers have fulfilled their dreams
-              with us.
+              PR GROW is your one-stop destination to search for the best Home
+              Loans, Personal Loans, and Credit Cards in India. Since last
+              years, more than 10K customers have fulfilled their dreams with
+              us.
             </p>
+            <div className="p-1 lg:p-3 lg:flex">
+              <div>
+          <Link to="/services/personal">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>Personal</span>
+              </li>
+          </Link>
+          <Link to="/services/doctor">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>Doctor</span>
+              </li>
+          </Link>
+
+          <Link to="/services/home">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>Home</span>
+              </li>
+          </Link>
+
+          <Link to="/services/business">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>Business</span>
+              </li>
+          </Link>
+              </div>
+              <div>
+
+                <Link to="/services/mortgage">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>Mortgage Loan</span>
+              </li>
+              </Link>
+
+              <Link to="/services/sme">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>SME Loan</span>
+              </li>
+              </Link>
+
+              <Link to="/services/working-capital">
+              <li className="flex items-center p-3">
+                <ArrowForwardIcon />
+                <span>Working Capital</span>
+              </li>
+              </Link>
+              </div>
+              
+            </div>
           </div>
-{/* explore sections belwo */}
+          {/* explore sections belwo */}
           <div className="w-full lg:w-1/3 p-3">
             <div>
               <h1 className="mb-2 text-3xl font-bold">Explore</h1>
@@ -84,60 +137,93 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-{/* contact section below */}
+        {/* contact section below */}
         <div className="w-full lg:w-1/2 lg:flex">
           <div className="w-full lg:w-1/2 p-3">
             <div>
               <h1 className="mb-4 text-3xl font-bold">Latest News</h1>
               <div className="flex items-center mb-4">
-                <img src="https://upgroww.com/assets/images/resources/f1.jpg" alt="" className="w-8 h-8 mr-2" />
+                <img
+                  src="https://upgroww.com/assets/images/resources/f1.jpg"
+                  alt=""
+                  className="w-8 h-8 mr-2"
+                />
                 <span>Easy loan solutions for All Loan</span>
               </div>
               <div className="flex items-center">
-                <img src="https://upgroww.com/assets/images/resources/f2.jpg" alt="" className="w-8 h-8 mr-2" />
-                <span>Prgrow excellence in providing the best loan</span>
+                <img
+                  src="https://upgroww.com/assets/images/resources/f2.jpg"
+                  alt=""
+                  className="w-8 h-8 mr-2"
+                />
+                <span>PR GROW excellence in providing the best loan</span>
               </div>
             </div>
           </div>
           <div className="w-full lg:px-3  p-3 bg-blue-950 lg:m-10">
             <div className="mb-4 text-3xl font-bold">Contact</div>
             <div className="mb-4 flex border-b border-gray-400 py-2">
-                <div className="m-1"><EmailIcon/></div>
-                <div className="m-1"> Prgrowinsightprivatelimited@gmail.com
-                    <br/>
-                    
-                </div>
+              <div className="m-1">
+                <EmailIcon />
+              </div>
+              <div className="m-1">
+                {" "}
+                Prgrowinsightprivatelimited@gmail.com
+                <br />
+              </div>
             </div>
             <div className="mb-4 flex border-b border-gray-400 py-2">
-                <div className="m-1"><AccessTimeFilledIcon/></div>
-                <div className="m-1">Mon - Sat 9:00 AM - 6:00 PM
-                </div>
+              <div className="m-1">
+                <AccessTimeFilledIcon />
+              </div>
+              <div className="m-1">Mon - Sat 9:00 AM - 6:00 PM</div>
             </div>
             <div className="mb-4 flex py-2">
-                <div className="m-1"><LocationOnIcon/></div>
-                <div className="m-1">
-    <p><strong>HEAD Office:</strong> NH 31 PILLER NO 52, NEAR GYAN BHARTI (+2) HIGH SCHOOL, KAUSHAL COLONY, HARRAKH, BEGUSARAI, PIN- 851101</p> <br/>
-    {/* <p><strong>Corporate Office:</strong> AZAD MARKET, 1ST FLOOR, PIRMUHANI RAJENDRA PATH, KADAMKUAN, OPPOSITE- UMA CINEMA HALL, PATNA -800003</p> */}
-</div>
-
+              <div className="m-1">
+                <LocationOnIcon />
+              </div>
+              <div className="m-1">
+                <p>
+                  <strong>HEAD Office:</strong> NH 31 PILLER NO 52, NEAR GYAN
+                  BHARTI (+2) HIGH SCHOOL, KAUSHAL COLONY, HARRAKH, BEGUSARAI,
+                  PIN- 851101
+                </p>{" "}
+                <br />
+                {/* <p><strong>Corporate Office:</strong> AZAD MARKET, 1ST FLOOR, PIRMUHANI RAJENDRA PATH, KADAMKUAN, OPPOSITE- UMA CINEMA HALL, PATNA -800003</p> */}
+              </div>
             </div>
           </div>
         </div>
       </div>
       {/* Footer middle section ends */}
 
-
       {/* copyright sections starts */}
       <div className="Copyright lg:flex w-full justify-around bg-blue-950">
-        <div className="lg:w-1/3 flex justify-center align-middle "><span className="text-white mx-1">© Copyright 2022 by</span> <span className="text-blue-500 ">Prgrow Insight Pvt. Ltd.</span></div>
-        <div className="lg:w-1/3 flex justify-center align-middle "> <span className="text-gray-400">Design by</span> <span className="text-blue-500 mx-1">RCS info tech</span> </div>
+        <div className="lg:w-1/3 flex justify-center align-middle ">
+          <span className="text-white mx-1">© Copyright 2022 by</span>{" "}
+          <span className="text-blue-500 ">PR GROW</span>
+        </div>
+        <div className="lg:w-1/3 flex justify-center align-middle ">
+          {" "}
+          <span className="text-gray-400">Design by</span>{" "}
+          <span className="text-blue-500 mx-1">RCS info tech</span>{" "}
+        </div>
         <div className="lg:w-1/3 flex justify-center align-middle p-2">
-          <Link to=""></Link>  <div className="p-2 mx-2 rounded-full bg-slate-600"><FacebookIcon/></div>
-            <div className="p-2 mx-2 rounded-full bg-slate-600"><XIcon/></div>
-            <div className="p-2 mx-2 rounded-full bg-slate-600"><PinterestIcon/></div>
-            <div className="p-2 mx-2 rounded-full bg-slate-600"><InstagramIcon/></div>
+          <Link to=""></Link>{" "}
+          <div className="p-2 mx-2 rounded-full bg-slate-600">
+            <FacebookIcon />
+          </div>
+          <div className="p-2 mx-2 rounded-full bg-slate-600">
+            <XIcon />
+          </div>
+          <div className="p-2 mx-2 rounded-full bg-slate-600">
+            <PinterestIcon />
+          </div>
+          <div className="p-2 mx-2 rounded-full bg-slate-600">
+            <InstagramIcon />
+          </div>
         </div>
-        </div>
+      </div>
       {/* copyright section ends */}
     </>
   );

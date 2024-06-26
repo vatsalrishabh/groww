@@ -6,7 +6,7 @@ const ApplicationProc: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center text-white mb-12">
           <h2 className="text-4xl font-bold">Fast & Easy Application Process</h2>
-          <p className="mt-4">Prgrow's loan application process is designed to be quick, simple, and hassle-free.</p>
+          <p className="mt-4">PR GROW's loan application process is designed to be quick, simple, and hassle-free.</p>
         </div>
         <div className="flex justify-center space-x-8 px-2">
           {/* Step 1: Check Eligibility & Apply Online */}

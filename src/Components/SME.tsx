@@ -156,11 +156,11 @@ const SME: React.FC = () => {
           <div className="business-heading p-10">
             <h1 className="text-4xl font-bold ">SME Loan</h1>
             <p className="lg:p-10 p-2 py-10">
-            SME Loans from Prgrow are an unsecured form of credit, making them an ideal solution to meet immediate financial needs. These loans are versatile and can be used for a variety of purposes, such as weddings, home renovations, travel expenses, and more. With Prgrow SME Loans, there are no restrictions on how the borrowed amount is used, providing you with the freedom to allocate funds as you see fit.
+            SME Loans from PR GROW are an unsecured form of credit, making them an ideal solution to meet immediate financial needs. These loans are versatile and can be used for a variety of purposes, such as weddings, home renovations, travel expenses, and more. With PR GROW SME Loans, there are no restrictions on how the borrowed amount is used, providing you with the freedom to allocate funds as you see fit.
 
-One significant advantage of a Prgrow SME Loan is the potential to build your credit more quickly compared to other forms of credit. This is due to the higher risk associated with unsecured loans, which, when managed well, can positively impact your credit score. Prgrow SME Loans are designed to be accessible, with minimal documentation required, fast processing times, and immediate disbursal to your bank account. 
+One significant advantage of a PR GROW SME Loan is the potential to build your credit more quickly compared to other forms of credit. This is due to the higher risk associated with unsecured loans, which, when managed well, can positively impact your credit score. PR GROW SME Loans are designed to be accessible, with minimal documentation required, fast processing times, and immediate disbursal to your bank account. 
 
-Whether you need funds urgently for an unexpected expense or to achieve a personal goal, Prgrow SME Loans offer a straightforward and efficient way to access the money you need quickly. Choose Prgrow for a reliable and flexible financial solution to meet your immediate requirements.
+Whether you need funds urgently for an unexpected expense or to achieve a personal goal, PR GROW SME Loans offer a straightforward and efficient way to access the money you need quickly. Choose PR GROW for a reliable and flexible financial solution to meet your immediate requirements.
             </p>
           </div>
 
