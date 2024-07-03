@@ -10,7 +10,16 @@ const Contactus:React.FC = () => {
     <div className='Contacus'>
       <SubNav main="Home" submain="Contact Us" heading="Contact Us" bgimg={subnavbg}/>
       <ContactForm/>
-      <FullEmbeded/>
+
+      <div className="w-full lg:flex">
+        <div className="lg:w-1/2 p-3 bg-slate-300">
+            <h1 className='center'>Head Office</h1><FullEmbeded/>
+        </div>
+        <div className="lg:w-1/2 p-3 bg-slate-300">
+        <h1 className='center'>Patna Office</h1><FullEmbeded/>
+        </div>
+      </div>
+      
       <Footer/>
     </div>
   )

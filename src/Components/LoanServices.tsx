@@ -14,7 +14,7 @@ const LoanServices:React.FC = () => {
   return (
     <div className='OurSercice w-full'>
         <div className='w-full flex align-middle justify-center p-5'>PR GROW Offering</div>
-        <div className='w-full flex align-middle lg:text-5xl text-3xl  font-bold p-5'>Loans Services</div>
+        <div className='w-full flex align-middle justify-center lg:text-5xl text-3xl  font-bold p-5'>Loans Services</div>
 {/* main slider */}
 <div className="flex overflow-y-scroll lg:overflow-x-scroll lg:justify-center">
       {/* Slider Item 1 */}

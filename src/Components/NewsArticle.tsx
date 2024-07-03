@@ -1,11 +1,11 @@
 import React from 'react';
-import car from '../assets/Newsimg/car.jpg';
-import home from '../assets/Newsimg/home.jpg';
-import business from '../assets/Newsimg/business.jpg';
-import PersonIcon from '@mui/icons-material/Person';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
-import ForumIcon from '@mui/icons-material/Forum';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+// import car from '../assets/Newsimg/car.jpg';
+// import home from '../assets/Newsimg/home.jpg';
+// import business from '../assets/Newsimg/business.jpg';
+// import PersonIcon from '@mui/icons-material/Person';
+// import CreditCardIcon from '@mui/icons-material/CreditCard';
+// import ForumIcon from '@mui/icons-material/Forum';
+// import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const NewsArticle: React.FC = () => {
   return (

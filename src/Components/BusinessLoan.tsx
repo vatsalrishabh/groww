@@ -1,13 +1,16 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import business from "../assets/Business/business.webp";
+// import business from "../assets/Business/business.webp";
 import SubNav from "./SubNav";
 import subnavbusi from "../assets/Business/subnavbusi.jpg";
 import transpar from "../assets/Business/transpar.avif";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
-const BusinessLoan: React.FC = () => {
+interface PersonalLoanProps {
+  rightImg?: string; // Optional prop for right image URL
+}
+const BusinessLoan: React.FC<PersonalLoanProps> = ({rightImg}) => {
   return (
     <>
       <SubNav
@@ -152,7 +155,7 @@ const BusinessLoan: React.FC = () => {
         <div className="lg:w-2/3 ">
           <div className="image-container w-full flex justify-center align-middle p-10">
             <div className="the-image">
-              <img src={business} alt="" />
+              <img src={rightImg} alt="" />
             </div>
           </div>
           <div className="business-heading p-10">

@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+To calculate amortiztion EMI :- we use Monthly Payment = (P*r/n) /  (1-(1+r/n)^-nt)   where r is annual rate interest and t is the tenure for how long you are taking the loan, n= number of months in year.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

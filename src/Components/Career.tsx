@@ -1,7 +1,7 @@
 import React from 'react'
 import SubNav from './SubNav'
 import Footer from './Footer'
-import FullEmbeded from './FullEmbeded'
+// import FullEmbeded from './FullEmbeded'
 import subnavbg from '../assets/career/careerbg.jpg'
 import CareerContact from './CareerContact'
 
@@ -10,7 +10,7 @@ const Career:React.FC = () => {
     <div className='Contacus'>
       <SubNav main="Home" submain="Career" heading="Career" bgimg={subnavbg}/>
      <CareerContact/>   {/*form to send pdf */}
-      <FullEmbeded/>
+      {/* <FullEmbeded/> */}
       <Footer/>
     </div>
   )

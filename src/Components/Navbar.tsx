@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CallIcon from '@mui/icons-material/Call';
 import './Navbar.css'
+import prgorw from '../assets/prgrow.jpeg'
 
 const Navbar: React.FC = () => {
   const [userDropdownVisible, setUserDropdownVisible] = useState(false);
@@ -39,12 +40,12 @@ const Navbar: React.FC = () => {
     setServicesDropdownVisible(false);
   };
 
-  const toggleAboutDropdown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    setAboutDropdownVisible(!aboutDropdownVisible);
-    setUserDropdownVisible(false);
-    setServicesDropdownVisible(false);
-  };
+  // const toggleAboutDropdown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  //   e.preventDefault();
+  //   setAboutDropdownVisible(!aboutDropdownVisible);
+  //   setUserDropdownVisible(false);
+  //   setServicesDropdownVisible(false);
+  // };
 
   const toggleServicesDropdown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -60,6 +61,7 @@ const Navbar: React.FC = () => {
   };
 
   const getLinkClasses = (path: string) => {
+    console.log(aboutDropdownVisible);
     return location.pathname === path ? 'text-blue-500' : 'text-gray-700';
   };
 
@@ -74,8 +76,8 @@ const Navbar: React.FC = () => {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PR GROW <p className='text-sm pl-6 text-stone-500	'>WE GROW TOGETHER</p></span>
+          <img src={prgorw} className="lg:h-20 h-10 rounded-sm" alt="Flowbite Logo" />
+         {/*      <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PR GROW <p className='text-sm pl-6 text-stone-500	'>WE GROW TOGETHER</p></span> */}
           </Link>
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
@@ -102,11 +104,15 @@ const Navbar: React.FC = () => {
             </button>
           </div>
           <div className={`items-center justify-between ${hidden} w-full md:flex md:w-auto md:order-1`} id='navbar-user'>
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col font-bold text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link to="/" className={`nav-link block py-2 px-3 rounded md:bg-white lg:text-black dark:text-white md:p-0 ${getLinkClasses('/')}`} aria-current="page">Home</Link>
               </li>
-              <li className="relative">
+              <li>
+                <Link to="/about" className={`nav-link block py-2 px-3 rounded md:bg-white lg:text-black dark:text-white md:p-0 ${getLinkClasses('/')}`} aria-current="page">About</Link>
+              </li>
+
+              {/* <li className="relative">
                 <Link to="/about" onClick={toggleAboutDropdown} className={`nav-link block py-2 lg:text-black dark:text-white px-3 rounded md:bg-transparent md:p-0 ${getLinkClasses('/about')}`}>About Us</Link>
                 {aboutDropdownVisible && (
                   <ul ref={aboutDropdownRef} className="absolute left-0 mt-2 w-48 z-10 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600">
@@ -114,7 +120,8 @@ const Navbar: React.FC = () => {
                     <li><Link to="/about/team" onClick={closeDropdowns} className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Team</Link></li>
                   </ul>
                 )}
-              </li>
+              </li> */}
+
               <li className="relative">
                 <Link to="/services" onClick={toggleServicesDropdown} className={`nav-link block py-2 px-3 rounded lg:text-black dark:text-white md:bg-transparent md:p-0 ${getLinkClasses('/services')}`}>Services</Link>
                 {servicesDropdownVisible && (
@@ -130,9 +137,9 @@ const Navbar: React.FC = () => {
                   </ul>
                 )}
               </li>
-              <li>
+              {/* <li>
                 <Link to="/news" className={`nav-link block py-2 px-3 dark:text-white rounded md:bg-transparent md:p-0 ${getLinkClasses('/news')}`}>News</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/gallery" className={`nav-link block py-2 px-3 dark:text-white rounded md:bg-transparent md:p-0 ${getLinkClasses('/gallery')}`}>Gallery</Link>
               </li>
@@ -149,12 +156,12 @@ const Navbar: React.FC = () => {
                  <CallIcon color="success" sx={{ fontSize: 40 }} />
               </li>
             <Link to="tel:9113453768">
-            <li className=' text-black pl-5'>
-              <span className='res-text'>Call us 24/7</span>
+            <li className=' text-black flex'>
+              {/* <span className='res-text'>Call us 24/7</span> */}
     
-    <br />
-    <span className='text-2xl res-text'>91134 53768</span>
-    </li>
+            <br />
+             <span className='text-2xl res-text'>91134 53768</span>
+            </li>
 
             </Link>
             </ul>

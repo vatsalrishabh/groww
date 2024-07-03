@@ -1,6 +1,6 @@
 import React from 'react';
 import SavingsIcon from '@mui/icons-material/Savings';
-import whychoose from '../assets/whychoose/whychoose.png';
+import whychoose from '../assets/whychoose/whychoose.jpg';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const WhyChooseUs: React.FC = () => {
@@ -15,10 +15,10 @@ const WhyChooseUs: React.FC = () => {
               <div className='text-white text-2xl'>4 years of working experience</div>
             </div>
           </div>
-          <div className="bg-blue-800 rounded-lg p-6 mb-4">
+          <div className="bg-blue-800 rounded-lg p-3 mb-4">
             <img src={whychoose} alt="Why Choose Us" className="w-full" />
           </div>
-          <div className="bg-blue-800 rounded-lg p-6 text-white text-center">Trust us!</div>
+          <div className="bg-blue-800 rounded-lg p-3 text-white text-center lg:text-2xl">Trust us!</div>
         </div>
         {/* Right Side */}
         <div className="lg:w-1/2 pl-4">

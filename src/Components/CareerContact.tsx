@@ -9,26 +9,33 @@ const CareerContact: React.FC = () => {
     number: '',
     email: '',
     subject: '',
-    file: null as File | null,
+    message: '', // Changed from 'file' to 'message'
   });
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setContactForm({ ...contactForm, file: e.target.files[0] });
-    }
+  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setContactForm({ ...contactForm, message: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_ci63mzk', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_USER_ID')
-      .then((result) => {
-        console.log(result.text);
-        alert('Message sent successfully!');
-      }, (error) => {
-        console.log(error.text);
-        alert('Failed to send message. Please try again later.');
-      });
+    emailjs
+      .sendForm(
+        'service_ci63mzk',
+        'YOUR_TEMPLATE_ID',
+        e.target as HTMLFormElement,
+        'YOUR_USER_ID'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again later.');
+        }
+      );
   };
 
   return (
@@ -78,7 +85,17 @@ const CareerContact: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-user"></i>
                 </span>
-                <input type="text" name="name" placeholder='Name' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" value={contactForm.name} onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })} required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder='Name'
+                  className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"
+                  value={contactForm.name}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, name: e.target.value })
+                  }
+                  required
+                />
               </div>
             </div>
             <div className="mb-4">
@@ -86,7 +103,17 @@ const CareerContact: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-phone"></i>
                 </span>
-                <input type="tel" name="phone" placeholder='Number' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" value={contactForm.number} onChange={(e) => setContactForm({ ...contactForm, number: e.target.value })} required />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder='Number'
+                  className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"
+                  value={contactForm.number}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, number: e.target.value })
+                  }
+                  required
+                />
               </div>
             </div>
             <div className="mb-4">
@@ -94,7 +121,17 @@ const CareerContact: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-envelope"></i>
                 </span>
-                <input type="email" name="email" placeholder='Email' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" value={contactForm.email} onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })} required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder='Email'
+                  className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"
+                  value={contactForm.email}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, email: e.target.value })
+                  }
+                  required
+                />
               </div>
             </div>
             <div className="mb-4">
@@ -102,19 +139,40 @@ const CareerContact: React.FC = () => {
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-tag"></i>
                 </span>
-                <input type="text" name="subject" placeholder='Subject' className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" value={contactForm.subject} onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })} required />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder='Subject'
+                  className="w-full text-gray-700 placeholder-gray-500 focus:outline-none"
+                  value={contactForm.subject}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, subject: e.target.value })
+                  }
+                  required
+                />
               </div>
             </div>
+            {/* Replace file input with textarea */}
             <div className="mb-4">
               <div className="flex items-center border border-gray-300 rounded-md p-2 focus-within:ring-2 focus-within:ring-gray-400">
                 <span className="mr-2 text-gray-500">
                   <i className="fas fa-file-alt"></i>
                 </span>
-                <input type="file" name="file" className="w-full text-gray-700 placeholder-gray-500 focus:outline-none" onChange={handleFileChange} required />
+                <textarea
+                  name="message"
+                  placeholder='Your relevent experience/skills...'
+                  className="w-full h-32 text-gray-700 placeholder-gray-500 focus:outline-none resize-none"
+                  value={contactForm.message}
+                  onChange={handleTextareaChange}
+                  required
+                />
               </div>
             </div>
             <div className="text-center">
-              <button type="submit" className="bg-gradient-to-r from-gray-500 to-gray-700 text-white px-6 py-2 rounded-md hover:from-gray-600 hover:to-gray-800 transform hover:scale-105 transition-transform">
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-gray-500 to-gray-700 text-white px-6 py-2 rounded-md hover:from-gray-600 hover:to-gray-800 transform hover:scale-105 transition-transform"
+              >
                 Submit
               </button>
             </div>

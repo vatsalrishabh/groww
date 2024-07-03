@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar';
 import ErrorPage from './ErrorPage';
-import Nv from './Components/Nv';
+// import Nv from './Components/Nv';
 import Contactus from './Components/Contactus';
 import Home from './Components/Home';
 import Career from './Components/Career';
 import ApplyNow from './Components/ApplyNow';
 import Gallery from './Components/Gallery';
-import News from './Components/News';
+// import News from './Components/News';
 import BusinessLoan from './Components/BusinessLoan';
 import PersonalLoan from './Components/PersonalLoan';
 import HomeLoan from './Components/HomeLoan';
@@ -25,9 +25,9 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <Nv />
+        {/* <Nv /> */}
         <Navbar />
-<FixedWC/>
+        <FixedWC/>
 
         <Routes>
         <Route path="/" element={<Home />} />
@@ -35,17 +35,17 @@ function App() {
         <Route path="/career" element={<Career/>} />
         <Route path='/applynow' element={<ApplyNow/>} />
         <Route path='/gallery' element={<Gallery/>} />
-        <Route path='/news' element={<News/>} />
+        {/* <Route path='/news' element={<News/>} /> */}
         <Route path="/error" element={<ErrorPage />} />
-        <Route path="services/personal" element={<PersonalLoan/>}/>
-        <Route path="services/doctor" element={<DoctorsLoan/>}/>
-        <Route path="services/home" element={<HomeLoan/>}/>
-        <Route path="services/business" element={<BusinessLoan/>}/>
-        <Route path="services/mortgage" element={<Mortgage/>}/>
-        <Route path="services/sme" element={<SME/>}/>
-        <Route path="services/working-capital" element={<WorkingCapital/>}/>
-        <Route path="about/team" element={<AboutUs/>}/>
-        <Route path="about/company" element={<AboutUs/>}/>
+        <Route path="services/personal" element={<PersonalLoan rightImg="aa.jpg"/>}/>
+        <Route path="services/doctor" element={<DoctorsLoan rightImg="aa.jpg"/>}/>
+        <Route path="services/home" element={<HomeLoan rightImg="aa.jpg"/>}/>
+        <Route path="services/business" element={<BusinessLoan rightImg="aa.jpg"/>}/>
+        <Route path="services/mortgage" element={<Mortgage rightImg="aa.jpg"/>}/>
+        <Route path="services/sme" element={<SME rightImg="aa.jpg"/>}/>
+        <Route path="services/working-capital" element={<WorkingCapital rightImg="aa.jpg"/>}/>
+        <Route path="about" element={<AboutUs/>}/>
+        {/* <Route path="about/company" element={<AboutUs/>}/> */}
           {/* Add more Route components for additional pages */}
         </Routes>
     

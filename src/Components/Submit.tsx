@@ -56,11 +56,11 @@ const Submit: React.FC = () => {
   return (
     <div className="Form">
       <div className="container mx-auto py-10">
-        <h1 className="text-xl text-gray-900 dark:text-white mb-6">Calculate your loan amount</h1>
+        <h1 className="text-xl text-gray-900 dark:text-white mb-6"></h1>
         <h1 className='text-4xl font-bold mb-6'>Other Details</h1>
 
         {showAlert && (
-          <div className={`flex items-center p-4 mb-4 text-${alertType}-800 rounded-lg bg-${alertType}-50 dark:bg-gray-800 dark:text-${alertType}-400`} role="alert">
+          <div className={`flex bg-green-300 items-center p-4 mb-4 text-${alertType}-800 rounded-lg bg-${alertType}-50 dark:bg-gray-800 dark:text-${alertType}-400`} role="alert">
             <span className="sr-only">Info</span>
             <div className="ms-3 text-sm font-medium">{alertMessage}</div>
             <button type="button" onClick={closeAlert} className="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700" aria-label="Close">
@@ -84,6 +84,7 @@ const Submit: React.FC = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Name"
+                required
               />
             </div>
 
@@ -95,6 +96,7 @@ const Submit: React.FC = () => {
     value={loanType}
     onChange={(e) => setLoanType(e.target.value)}
     className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    required
   >
     <option value="" disabled>Select Loan Type</option>
     <option value="Personal Loan">Personal Loan</option>

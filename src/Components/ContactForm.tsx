@@ -42,6 +42,13 @@ const ContactForm: React.FC = () => {
             <h2 className="font-bold text-blue-950 text-xl">Call 24/7</h2>
             <h4 className='text-gray-600'>+91 91134 53768</h4>
           </div>
+          <div className="mr-4">
+          <CallIcon color="primary" sx={{ fontSize: 40 }} />
+          </div>
+          <div>
+            <h2 className="font-bold text-blue-950 text-xl">Call 24/7</h2>
+            <h4 className='text-gray-600'>+91  7903341684</h4>
+          </div>
         </div>
 
         <div className="my-4 flex items-center">
@@ -50,7 +57,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <h2 className="font-bold text-blue-950 text-xl">Write Email</h2>
-            <h4 className='text-gray-600'>Prgrowinsightprivatelimited@gmail.com <br />Prgrowinsightprivatelimited@gmail.com</h4>
+            <h4 className='text-gray-600'>Prgrowinsightprivatelimited@gmail.com <br />raja.kumar34537@gmail.com</h4>
           </div>
         </div>
 
@@ -59,8 +66,17 @@ const ContactForm: React.FC = () => {
             {/* <RoomIcon color="primary" sx={{ fontSize: 40 }}/> */}
           </div>
           <div>
-            <h2 className="font-bold text-blue-950 text-xl">Visit Office</h2>
+            <h2 className="font-bold text-blue-950 text-xl">HEAD Office</h2>
             <h4 className='text-gray-600'> NH 31 PILLER NO 52, NEAR GYAN BHARTI (+2) HIGH SCHOOL, KAUSHAL COLONY, HARRAKH, BEGUSARAI, PIN- 851101</h4>
+          </div>
+        </div>
+        <div className="flex items-center">
+          <div className="my-4">
+            {/* <RoomIcon color="primary" sx={{ fontSize: 40 }}/> */}
+          </div>
+          <div>
+            <h2 className="font-bold text-blue-950 text-xl">Patna Office</h2>
+            <h4 className='text-gray-600'> AZAD MARKET 1 ST FLOOR ROOM NO -2, PIRMUHANI KADAMKUAN, OPPOSITE- UMA CINEMA HALL PATNA- 800003</h4>
           </div>
         </div>
       </div>
