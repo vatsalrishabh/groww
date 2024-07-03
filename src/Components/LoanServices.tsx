@@ -50,7 +50,7 @@ const LoanServices:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <img src={business} alt="" className="mb-4" />
           <div className="text-2xl font-semibold mb-2">Business Loan</div>
-          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW Solutions Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
+          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW  Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
           <div className="flex justify-end mt-4">
             <div className='rounded-full bg-blue-600 white-svg'>
             <ArrowForwardIcon sx={{ fontSize: 40 }}  />
@@ -63,7 +63,7 @@ const LoanServices:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <img src={doctor} alt="" className="mb-4" />
           <div className="text-2xl font-semibold mb-2">Doctor Loan</div>
-          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW Solutions Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
+          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW  Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
           <div className="flex justify-end mt-4">
             <div className='rounded-full bg-blue-600 white-svg'>
             <ArrowForwardIcon sx={{ fontSize: 40 }}  />
@@ -76,7 +76,7 @@ const LoanServices:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <img src={mortgage} alt="" className="mb-4" />
           <div className="text-2xl font-semibold mb-2">Mortgage Loan</div>
-          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW Solutions Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
+          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW  Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
           <div className="flex justify-end mt-4">
             <div className='rounded-full bg-blue-600 white-svg'>
             <ArrowForwardIcon sx={{ fontSize: 40 }}  />
@@ -89,7 +89,7 @@ const LoanServices:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <img src={sme} alt="" className="mb-4" />
           <div className="text-2xl font-semibold mb-2">SME Loan</div>
-          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW Solutions Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
+          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW  Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
           <div className="flex justify-end mt-4">
             <div className='rounded-full bg-blue-600 white-svg'>
             <ArrowForwardIcon sx={{ fontSize: 40 }}  />
@@ -102,7 +102,7 @@ const LoanServices:React.FC = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <img src={WORKING} alt="" className="mb-4" />
           <div className="text-2xl font-semibold mb-2">Working Capital Loan</div>
-          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW Solutions Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
+          <div className="text-gray-600">We understand the value of effective business finance and offer a tailored solution for your funding needs. PR GROW  Business Loan is a financing instrument you can rely on whenever your enterprise needs fast Business Loans or capital on cost-effective terms.</div>
           <div className="flex justify-end mt-4">
             <div className='rounded-full bg-blue-600 white-svg'>
             <ArrowForwardIcon sx={{ fontSize: 40 }}  />
