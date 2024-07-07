@@ -1,6 +1,8 @@
 import Footer from './Footer'
 import SubNav from './SubNav'
 import aboutus from '../assets/AboutUs/aboutus.webp'
+import raja from '../assets/AboutUs/raja.jpg'
+import prashant from '../assets/AboutUs/prashant.jpg'
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const AboutUs = () => {
@@ -27,7 +29,7 @@ const AboutUs = () => {
 {/* main content ends */}
 
         {/* left starts */}
-    <div className='flex'>
+    <div className='lg:flex'>
     <div className="lg:w-2/3 ">
           <div className="image-container w-full flex justify-center align-middle p-10">
             <div className="the-image">
@@ -140,13 +142,44 @@ Looking ahead, PR GROW continues to expand its footprint and enhance its service
 
 
 {/* Right starts */}
-    <div className="lg:w-1/3">
-          <div className="p-8">
-              <div className="pb-5">
-                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_become_a_marketing_manager.jpg" alt="" />
-              </div>
-          </div>
+<div className="lg:w-1/3 w-full space-y-8">
+  {/* First Thought */}
+  <div className="p-8 bg-white shadow-lg rounded-lg">
+    <div className="pb-5">
+      <img
+        src={raja}
+        alt="Director Raja Kumar"
+        className="w-full h-auto rounded-lg"
+      />
     </div>
+    <div className="p-4 text-center">
+      <blockquote className="italic text-xl text-gray-800">
+        "Set your goal and keep moving forward with the right people in the right direction to reach your goal successfully."
+      </blockquote>
+      <p className="mt-4 text-lg font-semibold text-gray-700">RAJA KUMAR</p>
+      <p className="text-lg font-semibold text-gray-700">(DIRECTOR)</p>
+    </div>
+  </div>
+  {/* Second Thought */}
+  <div className="p-8 bg-white shadow-lg rounded-lg">
+    <div className="pb-5">
+      <img
+        src={prashant}
+        alt="Director Prashant Sonam"
+        className="w-full h-auto rounded-lg"
+      />
+    </div>
+    <div className="p-4 text-center">
+      <blockquote className="italic text-xl text-gray-800">
+        "Arise! Awake! and stop not until the goal is reached."
+      </blockquote>
+      <p className="mt-4 text-lg font-semibold text-gray-700">(DIRECTOR)</p>
+      <p className="text-lg font-semibold text-gray-700">PRASHANT SONAM</p>
+    </div>
+  </div>
+</div>
+
+    
 {/* Right ends */}
 
     </div>

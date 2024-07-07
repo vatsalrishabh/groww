@@ -1,6 +1,7 @@
 import React from 'react'
 import SubNav from './SubNav'
 import Footer from './Footer'
+import FullEmbededH from './FullEmbededH'
 import FullEmbeded from './FullEmbeded'
 import ContactForm from './ContactForm'
 import subnavbg from '../assets/contactus/subnavbg.jpg'
@@ -13,7 +14,7 @@ const Contactus:React.FC = () => {
 
       <div className="w-full lg:flex">
         <div className="lg:w-1/2 p-3 bg-slate-300">
-            <h1 className='center'>Head Office</h1><FullEmbeded/>
+            <h1 className='center'>Head Office</h1><FullEmbededH/> 
         </div>
         <div className="lg:w-1/2 p-3 bg-slate-300">
         <h1 className='center'>Patna Office</h1><FullEmbeded/>

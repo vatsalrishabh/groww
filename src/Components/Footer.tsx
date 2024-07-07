@@ -253,7 +253,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="m-1">
                 {" "}
-                7903341684
+                7903368071
               </div>
             </div>
             <div className="emailicon-email flex">

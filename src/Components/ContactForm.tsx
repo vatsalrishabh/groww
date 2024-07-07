@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <h2 className="font-bold text-blue-950 text-xl">Call 24/7</h2>
-            <h4 className='text-gray-600'>+91  7903341684</h4>
+            <h4 className='text-gray-600'>+91  7903368071</h4>
           </div>
         </div>
 
