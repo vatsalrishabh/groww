@@ -18,8 +18,8 @@ const PieChart: React.FC<PieChartProps> = ({ principal, interest }) => {
         label: 'Loan Amount and Interest',
         data: [principal, interest],
         backgroundColor: [
-            'rgba(54, 162, 235, 0.2)',   // Dark blue
-            'rgba(255, 159, 64, 0.2)',   // Dark orange
+            'rgba(54, 162, 235, 0.8)',   // Dark blue
+            'rgba(255, 159, 64, 0.7)',   // Dark orange
           ],
           borderColor: [
             'rgba(54, 162, 235, 1)',    // Dark blue

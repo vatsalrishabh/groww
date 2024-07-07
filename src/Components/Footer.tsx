@@ -257,13 +257,13 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="emailicon-email flex">
-              <div className="m-1">
+              {/* <div className="m-1">
                 <CallIcon />
-              </div>
-              <div className="m-1">
+              </div> */}
+              {/* <div className="m-1">
                 {" "}
                 77659 54226
-              </div>
+              </div> */}
             </div>
 
 
@@ -337,7 +337,7 @@ const Footer: React.FC = () => {
           <div className="p-2 mx-2 rounded-full bg-slate-600">
             <PinterestIcon />
           </div> */}
-            <Link to="https://www.facebook.com/people/PR-Grow-Insight/61561226145535/" target="_blank">
+            <Link to="https://www.instagram.com/pr_grow_insight?igsh=MXF1Z3d6dWZpOTkxMQ==" target="_blank">
           <div className="p-2 mx-2 rounded-full bg-slate-600">
             <InstagramIcon />
           </div>

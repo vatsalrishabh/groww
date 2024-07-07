@@ -173,8 +173,9 @@ Looking ahead, PR GROW continues to expand its footprint and enhance its service
       <blockquote className="italic text-xl text-gray-800">
         "Arise! Awake! and stop not until the goal is reached."
       </blockquote>
-      <p className="mt-4 text-lg font-semibold text-gray-700">(DIRECTOR)</p>
+
       <p className="text-lg font-semibold text-gray-700">PRASHANT SONAM</p>
+      <p className="mt-4 text-lg font-semibold text-gray-700">(DIRECTOR)</p>
     </div>
   </div>
 </div>
